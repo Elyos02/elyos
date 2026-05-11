@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="it" style="overflow-x:hidden">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contatti — Elyos Ladispoli</title>
+<meta name="theme-color" content="#080C18">
+<meta name="description" content="Contatta Elyos per interventi elettrici a Ladispoli. WhatsApp, telefono o form. Risposta garantita entro 10 minuti.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --orange:#FF6B2B;--orange-l:#FF8C47;--orange-d:#E05510;
+  --blue:#1B6FD8;--blue-l:#3B8FFF;
+  --green:#22C55E;--azure:#0EA5E9;
+  --dark:#060B14;--dark2:#0C1422;--dark3:#111C30;--dark4:#172236;
+  --card:#0E1828;--card2:#152030;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --text:#EEF2FF;--text2:#8A9BBF;--text3:#8B9EC0;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Outfit",sans-serif;background:var(--dark);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Barlow Condensed",sans-serif;line-height:1.05}
+a{color:inherit;text-decoration:none}
+.container{max-width:1060px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,11,20,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:.3s}
+.nav-inner{display:flex;align-items:center;gap:24px;padding:14px 28px;max-width:1160px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:8px;font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;color:var(--white);letter-spacing:.02em;flex-shrink:0}
+.logo svg{width:26px;height:26px}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:8px}
+.nav-link{padding:7px 12px;border-radius:8px;font-size:14px;font-weight:500;color:var(--text2);transition:.2s}
+.nav-link:hover,.nav-link.active{color:var(--white);background:rgba(255,255,255,.06)}
+.nav-ctas{margin-left:auto;display:flex;gap:8px;align-items:center}
+.btn-partner{padding:8px 16px;border:1px solid rgba(255,107,26,.35);border-radius:8px;font-size:13px;font-weight:600;color:var(--orange);background:rgba(255,107,26,.08);transition:.2s;white-space:nowrap}
+.btn-partner:hover{background:rgba(255,107,26,.15);border-color:rgba(255,107,26,.6)}
+.btn-nav-cta{padding:8px 18px;border:none;border-radius:8px;font-size:13px;font-weight:600;color:white;background:var(--orange);cursor:pointer;transition:.2s;white-space:nowrap}
+.btn-nav-cta:hover{background:var(--orange-l);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text2);border-radius:2px;transition:.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* FOOTER */
+footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-logo{display:flex;align-items:center;gap:8px;font-family:"Barlow Condensed",sans-serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:12px}
+.footer-brand p{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:18px}
+.footer-social{display:flex;gap:8px}
+.social-btn{padding:7px 14px;border:1px solid var(--border2);border-radius:8px;font-size:13px;color:var(--text2);transition:.2s}
+.social-btn:hover{background:var(--dark3);color:var(--text)}
+.footer-col{display:flex;flex-direction:column;gap:8px}
+.footer-col-title{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:6px}
+.footer-col a,.footer-col span{font-size:13px;color:var(--text2);transition:.2s}
+.footer-col a:hover{color:var(--text)}
+.footer-bottom{border-top:1px solid var(--border);padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom span{font-size:12px;color:var(--text3)}
+.footer-links{display:flex;gap:16px}
+.footer-links a{font-size:12px;color:var(--text3);cursor:pointer}
+.footer-links a:hover{color:var(--text2)}
+
+/* PRIV MODAL */
+.priv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);z-index:400;align-items:center;justify-content:center;padding:20px}
+.priv-overlay.open{display:flex}
+.priv-box{background:var(--dark2);border:1px solid var(--border2);border-radius:20px;padding:36px;width:100%;max-width:660px;max-height:88vh;overflow-y:auto;position:relative}
+.priv-box h2{font-family:"Barlow Condensed",sans-serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:6px}
+.priv-box h3{font-size:15px;font-weight:600;color:var(--white);margin:18px 0 5px}
+.priv-box p,.priv-box li{font-size:13px;color:var(--text2);line-height:1.7}
+.priv-box ul{padding-left:18px;margin-top:5px}
+.priv-close{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;background:var(--dark3);border:1px solid var(--border);color:var(--text2);font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}
+.priv-date{font-size:11px;color:var(--text3);margin-bottom:18px}
+
+/* COOKIE BAR */
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:300;background:#0C1422;border-top:1px solid var(--border2);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cookie-bar p{font-size:13px;color:var(--text2);flex:1;min-width:200px;line-height:1.5}
+.cookie-bar a{color:var(--azure);text-decoration:underline;cursor:pointer}
+.cb-btns{display:flex;gap:8px;flex-shrink:0}
+.cb-accept{padding:8px 18px;background:var(--orange);color:white;border:none;border-radius:8px;font-family:"Outfit",sans-serif;font-size:13px;font-weight:600;cursor:pointer}
+.cb-accept:hover{background:var(--orange-l)}
+.cb-decline{padding:8px 14px;background:transparent;color:var(--text2);border:1px solid var(--border2);border-radius:8px;font-family:"Outfit",sans-serif;font-size:13px;cursor:pointer}
+
+/* SHARED UTILS */
+.section-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--azure);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.section-label::before{content:"";display:inline-block;width:18px;height:2px;background:var(--azure);border-radius:2px}
+.section-title{font-size:clamp(34px,4.5vw,54px);font-weight:800;color:var(--white);margin-bottom:14px}
+.section-desc{font-size:15px;color:var(--text2);max-width:520px;line-height:1.75}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);animation:pd 2s infinite;display:inline-block}
+@keyframes pd{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* MOBILE */
+@media(max-width:860px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(6,11,20,.98);border-bottom:1px solid var(--border);flex-direction:column;padding:16px;gap:2px}
+  .nav-links.open{display:flex}
+  .hamburger{display:flex}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .footer-brand{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .footer-grid{grid-template-columns:1fr}
+  .footer-brand{grid-column:auto}
+  .nav-ctas .btn-nav-cta{display:none}
+  .cookie-bar{flex-direction:column;align-items:flex-start}
+}
+
+.page-hero{padding:140px 0 60px;position:relative;overflow:hidden;text-align:center}
+.page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(255,107,26,.1) 0%,transparent 70%),var(--dark)}
+.page-hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.page-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(255,107,26,.08);border:1px solid rgba(255,107,26,.2);border-radius:999px;padding:5px 14px;font-size:11px;font-weight:600;color:var(--orange);letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
+.page-title{font-size:clamp(44px,6vw,76px);font-weight:900;color:var(--white);margin-bottom:14px}
+.page-desc{font-size:16px;color:var(--text2);line-height:1.75}
+.contact-section{padding:60px 0 96px}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.contact-cards{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.contact-card{background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:22px 20px;display:flex;align-items:flex-start;gap:14px;transition:.2s;text-decoration:none}
+.contact-card:hover{border-color:rgba(255,107,26,.35);transform:translateX(4px)}
+.cc-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.cc-o{background:rgba(255,107,26,.12);border:1px solid rgba(255,107,26,.25)}
+.cc-g{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.25)}
+.cc-b{background:rgba(27,111,216,.12);border:1px solid rgba(27,111,216,.25)}
+.cc-label{font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+.cc-value{font-size:15px;font-weight:600;color:var(--white)}
+.cc-sub{font-size:12px;color:var(--text2);margin-top:2px}
+.zone-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px}
+.zone-box h4{font-size:14px;font-weight:600;color:var(--white);margin-bottom:14px}
+.zone-list{display:flex;flex-wrap:wrap;gap:8px}
+.zone-tag{font-size:12px;padding:5px 12px;border-radius:999px;background:var(--dark3);border:1px solid var(--border2);color:var(--text2)}
+.form-box{background:var(--dark2);border:1px solid var(--border2);border-radius:24px;padding:36px}
+.form-box h3{font-family:"Barlow Condensed",sans-serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:6px}
+.form-box .form-sub{font-size:14px;color:var(--text2);margin-bottom:28px}
+.form-row{margin-bottom:14px}
+.form-row label{display:block;font-size:11px;font-weight:600;color:var(--text2);margin-bottom:5px;letter-spacing:.04em;text-transform:uppercase}
+.form-row label span{color:#F87171;margin-left:2px}
+.form-input{width:100%;padding:12px 14px;background:var(--dark3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:"Outfit",sans-serif;font-size:14px;outline:none;transition:.2s}
+.form-input:focus{border-color:var(--orange)}
+.form-input::placeholder{color:var(--text3)}
+.form-textarea{width:100%;padding:12px 14px;background:var(--dark3);border:1px solid var(--border2);border-radius:10px;color:var(--text);font-family:"Outfit",sans-serif;font-size:14px;outline:none;transition:.2s;resize:vertical;min-height:110px}
+.form-textarea:focus{border-color:var(--orange)}
+.form-textarea::placeholder{color:var(--text3)}
+.gdpr-row{display:flex;align-items:flex-start;gap:10px;margin:14px 0;padding:12px 14px;background:rgba(14,165,233,.05);border:1px solid rgba(14,165,233,.12);border-radius:10px}
+.gdpr-row input[type=checkbox]{width:16px;height:16px;margin-top:2px;flex-shrink:0;accent-color:var(--orange);cursor:pointer}
+.gdpr-row label{font-size:12px;color:var(--text2);line-height:1.5;cursor:pointer}
+.gdpr-row label a{color:var(--azure);text-decoration:underline}
+.submit-btn{width:100%;padding:14px;border:none;border-radius:10px;background:var(--orange);color:white;font-family:"Outfit",sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:.25s}
+.submit-btn:hover{background:var(--orange-l);transform:translateY(-1px)}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.success-box{display:none;text-align:center;padding:28px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:14px}
+.success-box .si{font-size:44px;margin-bottom:12px}
+.success-box h3{font-size:20px;font-weight:700;color:var(--white);margin-bottom:6px}
+.success-box p{font-size:13px;color:var(--text2)}
+.orari-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-top:14px}
+.orari-box h4{font-size:14px;font-weight:600;color:var(--white);margin-bottom:12px}
+.orario-row{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px solid var(--border)}
+.orario-row:last-child{border-bottom:none;padding-bottom:0}
+.orario-row span:first-child{color:var(--text2)}
+.orario-row span:last-child{color:var(--white);font-weight:500}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ═══ GLOBAL MOBILE OVERFLOW FIX ═══ */
+html,body{max-width:100%;overflow-x:hidden}
+*{box-sizing:border-box}
+img{max-width:100%;height:auto}
+
+/* ═══ RESPONSIVE GRIDS — fix all overflow on mobile ═══ */
+@media(max-width:640px){
+  /* Any 4-col or 3-col grid becomes 2-col on mobile */
+  [style*="grid-template-columns:repeat(4"],[style*="grid-template-columns: repeat(4"]{
+    grid-template-columns:1fr 1fr !important;
+  }
+  [style*="grid-template-columns:repeat(3"],[style*="grid-template-columns: repeat(3"]{
+    grid-template-columns:1fr 1fr !important;
+  }
+  /* 1fr auto grids (CTA sections) become single column */
+  [style*="grid-template-columns:1fr auto"],[style*="grid-template-columns: 1fr auto"]{
+    grid-template-columns:1fr !important;
+  }
+  /* 2-col grids with large content become 1-col */
+  [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+  /* Flex rows become column */
+  .partner-meta,.pc-meta{flex-direction:column;gap:8px}
+}
+@media(max-width:480px){
+  [style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* ═══ CTA SECTION MOBILE ═══ */
+@media(max-width:640px){
+  /* Partner CTA band */
+  .cta-band{padding:48px 0}
+  .cta-band h2{font-size:clamp(28px,7vw,44px)}
+  /* Become partner CTA section */
+  section[style*="padding:72px 0"]{padding:48px 0 !important}
+  /* Fix min-width:200px on button column */
+  [style*="min-width:200px"]{min-width:0 !important;width:100%}
+  [style*="min-width:200px"] a{width:100%;justify-content:center}
+}
+
+/* ═══ PARTNER CARDS MOBILE ═══ */
+.partner-card-link{display:block;text-decoration:none;color:inherit;transition:.25s}
+.partner-card-link:hover .pc-inner{border-color:rgba(255,107,43,.3)}
+
+/* ═══ PARTNER TRUST SECTION MOBILE ═══ */
+@media(max-width:640px){
+  .trust-partners-grid{
+    display:flex !important;
+    flex-direction:row !important;
+    overflow-x:auto !important;
+    scroll-snap-type:x mandatory !important;
+    gap:14px !important;
+    padding:0 0 16px !important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .trust-partners-grid::-webkit-scrollbar{display:none}
+  .trust-partners-grid > a{
+    flex-shrink:0 !important;
+    width:260px !important;
+    scroll-snap-align:start !important;
+  }
+  .trust-stats-grid{
+    grid-template-columns:1fr 1fr !important;
+  }
+}
+
+/* ═══ REVIEWS GRID MOBILE ═══ */
+@media(max-width:640px){
+  .reviews-grid,.pc-reviews{grid-template-columns:1fr !important}
+  .services-list,.pc-services{grid-template-columns:1fr 1fr !important}
+}
+
+</style>
+
+  <!-- ═══ SEO: Open Graph ═══ -->
+  <!-- Questi tag controllano come appare il link quando condiviso su social/WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Elyos">
+  <meta property="og:url" content="https://elyos.it/contatti/">
+  <meta property="og:title" content="Contatti — Elyos Ladispoli">
+  <meta property="og:description" content="Contatta Elyos per un intervento elettrico a Ladispoli. WhatsApp, telefono o form online. Risposta garantita.">
+  <meta property="og:image" content="https://elyos.it/og-home.jpg">
+  <meta property="og:locale" content="it_IT">
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contatti — Elyos Ladispoli">
+  <meta name="twitter:description" content="Contatta Elyos per un intervento elettrico a Ladispoli. WhatsApp, telefono o form online. Risposta garantita.">
+  <!-- Canonical: dice a Google qual è l'URL ufficiale, evita penalità contenuto duplicato -->
+  <link rel="canonical" href="https://elyos.it/contatti/">
+</head>
+<body>
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 28 28" fill="none"><path d="M16 2L4 16H13L12 26L24 12H15L16 2Z" fill="#FF6B1A"/></svg>
+      Elyos
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/interventi/" class="nav-link">Interventi</a>
+      <a href="/partner/i-nostri-partner/" class="nav-link">I nostri partner</a>
+      <a href="/chi-siamo/" class="nav-link">Chi siamo</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/contatti/" class="nav-link">Contatti</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="/partner/" class="btn-partner"><i class="ph ph-lightning"></i> Diventa Partner</a>
+      <a href="/interventi/" class="btn-nav-cta">Richiedi intervento</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow">📬 Contatti</div>
+      <h1 class="page-title">Parlaci.<br>Siamo persone reali.</h1>
+      <p class="page-desc">Siamo raggiungibili su WhatsApp, telefono o tramite il form qui sotto. Di solito rispondiamo entro 10 minuti in orario lavorativo.</p>
+    </div>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="section-label">Come contattarci</div>
+        <div class="contact-cards">
+          <a href="https://wa.me/393270511938" target="_blank" class="contact-card">
+            <div class="cc-icon cc-g">💬</div>
+            <div>
+              <div class="cc-label">WhatsApp (preferito)</div>
+              <div class="cc-value">+39 327 051 1938</div>
+              <div class="cc-sub">Risposta più rapida — scrivi zona, problema e urgenza</div>
+            </div>
+          </a>
+          <a href="tel:+393270511938" class="contact-card">
+            <div class="cc-icon cc-o">📞</div>
+            <div>
+              <div class="cc-label">Telefono</div>
+              <div class="cc-value">+39 327 051 1938</div>
+              <div class="cc-sub">Per emergenze urgenti — chiamaci direttamente</div>
+            </div>
+          </a>
+          <div class="contact-card" style="cursor:default">
+            <div class="cc-icon cc-b">📍</div>
+            <div>
+              <div class="cc-label">Zona operativa</div>
+              <div class="cc-value">Ladispoli e dintorni</div>
+              <div class="cc-sub">Cerenova, Cerveteri, Marina di S. Nicola</div>
+            </div>
+          </div>
+        </div>
+        <div class="orari-box">
+          <h4>⏰ Orari di risposta</h4>
+          <div class="orario-row"><span>Lunedì – Venerdì</span><span>7:00 – 22:00</span></div>
+          <div class="orario-row"><span>Sabato</span><span>8:00 – 20:00</span></div>
+          <div class="orario-row"><span>Domenica</span><span>Solo emergenze</span></div>
+        </div>
+        <div class="zone-box" style="margin-top:14px">
+          <h4>📍 Zone coperte</h4>
+          <div class="zone-list">
+            <span class="zone-tag">Ladispoli</span>
+            <span class="zone-tag">Cerenova</span>
+            <span class="zone-tag">Cerveteri</span>
+            <span class="zone-tag">Marina di S. Nicola</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="form-box">
+          <h3>Mandaci un messaggio</h3>
+          <p class="form-sub">Per richieste generali, domande o collaborazioni. Per emergenze usa WhatsApp o il telefono.</p>
+          <div id="form-cont">
+            <div class="form-row">
+              <label>Nome <span>*</span></label>
+              <input class="form-input" type="text" id="c-nome" placeholder="Il tuo nome" oninput="checkC()">
+            </div>
+            <div class="form-row">
+              <label>Telefono o email <span>*</span></label>
+              <input class="form-input" type="text" id="c-contact" placeholder="+39 320... oppure nome@email.it" oninput="checkC()">
+            </div>
+            <div class="form-row">
+              <label>Oggetto</label>
+              <select class="form-input" id="c-oggetto">
+                <option value="">Seleziona...</option>
+                <option>Richiesta intervento elettrico</option>
+                <option>Richiesta preventivo</option>
+                <option>Collaborazione / partnership</option>
+                <option>Informazioni generali</option>
+                <option>Altro</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>Messaggio <span>*</span></label>
+              <textarea class="form-textarea" id="c-msg" placeholder="Descrivi la tua richiesta..." oninput="checkC()"></textarea>
+            </div>
+            <div class="gdpr-row">
+              <input type="checkbox" id="c-gdpr" onchange="checkC()">
+              <label for="c-gdpr">Acconsento al trattamento dei miei dati per ricevere una risposta da Elyos, secondo la <a onclick="openPrivacy()" href="#">Privacy Policy</a>.</label>
+            </div>
+            <button class="submit-btn" id="c-submit" onclick="submitContact()" disabled>Invia messaggio →</button>
+          </div>
+          <div class="success-box" id="c-success">
+            <div class="si"><i class="ph ph-check-circle" style="font-size:52px;color:var(--green,#22C55E)"></i></div>
+            <h3>Messaggio ricevuto!</h3>
+            <p>Ti risponderemo entro poche ore. Per urgenze scrivi su WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 28 28" fill="none" width="24" height="24"><path d="M16 2L4 16H13L12 26L24 12H15L16 2Z" fill="#FF6B2B"/></svg>
+          Elyos
+        </div>
+        <p>Rete di tecnici elettrici verificati a Ladispoli. Coordiniamo l'intervento, garantiamo la qualità.</p>
+        <div class="footer-contacts">
+          <a href="https://wa.me/393270511938" target="_blank" class="footer-contact-btn">
+            <i class="ph ph-whatsapp-logo"></i> WhatsApp
+          </a>
+          <a href="tel:+393270511938" class="footer-contact-btn">
+            <i class="ph ph-phone-call"></i> Chiama
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Servizi</div>
+        <a href="/interventi/"><i class="ph ph-lightning-slash"></i> Pronto intervento</a>
+        <a href="/interventi/"><i class="ph ph-clipboard-text"></i> Sopralluogo e preventivo</a>
+        <a href="/partner/"><i class="ph ph-handshake"></i> Diventa partner</a>
+        <a href="/partner/i-nostri-partner/"><i class="ph ph-users-three"></i> I nostri partner</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Azienda</div>
+        <a href="/chi-siamo/"><i class="ph ph-users-three"></i> Chi siamo</a>
+        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog e news</a>
+        <a href="/contatti/"><i class="ph ph-envelope-simple"></i> Contatti</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Zone coperte</div>
+        <span><i class="ph ph-map-pin"></i> Ladispoli</span>
+        <span><i class="ph ph-map-pin"></i> Cerenova</span>
+        <span><i class="ph ph-map-pin"></i> Cerveteri</span>
+        <span><i class="ph ph-map-pin"></i> Marina di S. Nicola</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Elyos · P.IVA IT17181761002 · Ladispoli (RM)</span>
+      <div class="footer-links">
+        <a onclick="openPrivacy()" href="#">Privacy Policy</a>
+        <a onclick="openPrivacy()" href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="priv-overlay" id="priv-overlay">
+  <div class="priv-box">
+    <div class="priv-close" onclick="closePrivacy()"><i class="ph ph-x"></i></div>
+    <h2>Privacy Policy</h2>
+    <p class="priv-date">Ultimo aggiornamento: Maggio 2025</p>
+    <h3>1. Titolare del trattamento</h3>
+    <p>Elyos, Ladispoli (RM). Contatto: +39 327 051 1938</p>
+    <h3>2. Dati raccolti</h3>
+    <p>Raccogliamo solo i dati che fornisci volontariamente tramite i form del sito (telefono, email, zona, tipo richiesta). Non usiamo cookie di profilazione.</p>
+    <h3>3. Finalità e base giuridica</h3>
+    <p>Trattamento per rispondere alle richieste (art. 6 par.1 lett. b GDPR). Nessun utilizzo marketing senza consenso.</p>
+    <h3>4. Responsabile esterno</h3>
+    <p>I form usano <strong>Formspree Inc.</strong> come responsabile del trattamento. Privacy policy: formspree.io/legal/privacy-policy</p>
+    <h3>5. Conservazione</h3>
+    <p>Dati conservati per il tempo necessario alla gestione della richiesta, max 12 mesi.</p>
+    <h3>6. Tuoi diritti (artt. 15–22 GDPR)</h3>
+    <p>Accesso, rettifica, cancellazione, limitazione, portabilità, opposizione. Contattaci su WhatsApp o scrivi al Garante (garanteprivacy.it).</p>
+    <h3>7. Cookie</h3>
+    <p>Solo cookie tecnici essenziali. Nessun cookie pubblicitario o di terze parti.</p>
+  </div>
+</div>
+<div class="cookie-bar" id="cookie-bar">
+  <p><i class="ph ph-cookie" style="vertical-align:-.15em"></i> Questo sito usa solo cookie tecnici. Raccogliamo i dati dei form secondo il GDPR. <a onclick="openPrivacy()" href="#">Privacy Policy</a></p>
+  <div class="cb-btns">
+    <button class="cb-decline" onclick="closeCookie()" aria-label="Chiudi banner cookie">Chiudi</button>
+    <button class="cb-accept" onclick="closeCookie()" aria-label="Accetta cookie">Ho capito</button>
+  </div>
+</div>
+<script>
+
+function toggleMenu(){
+  const links = document.getElementById("nav-links");
+  const ham = document.getElementById("hamburger");
+  links.classList.toggle("open");
+  ham.classList.toggle("open");
+  document.body.style.overflow = links.classList.contains("open") ? "hidden" : "";
+}
+function openPrivacy(){
+  document.getElementById("priv-overlay").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closePrivacy(){
+  document.getElementById("priv-overlay").classList.remove("open");
+  document.body.style.overflow="";
+}
+function closeCookie(){
+  const bar = document.getElementById("cookie-bar");
+  if(bar) bar.style.display="none";
+  localStorage.setItem("ck","1");
+}
+document.addEventListener("DOMContentLoaded",function(){
+  // Active nav link
+  const path = window.location.pathname;
+  document.querySelectorAll(".nav-link").forEach(l=>{
+    if(l.getAttribute("href")===path || (path.startsWith(l.getAttribute("href")) && l.getAttribute("href")!=="/"))
+      l.classList.add("active");
+    else if(l.getAttribute("href")==="/" && path==="/") l.classList.add("active");
+  });
+  // Privacy overlay click
+  const ov = document.getElementById("priv-overlay");
+  if(ov) ov.addEventListener("click",e=>{ if(e.target===ov) closePrivacy(); });
+  // Cookie bar
+  if(localStorage.getItem("ck")){
+    const bar = document.getElementById("cookie-bar");
+    if(bar) bar.style.display="none";
+  }
+  // Nav scroll
+  window.addEventListener("scroll",()=>{
+    document.getElementById("main-nav").style.background =
+      window.scrollY>40?"rgba(6,11,20,.98)":"rgba(6,11,20,.92)";
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  function checkC(){
+    const nome = document.getElementById("c-nome").value.trim();
+    const contact = document.getElementById("c-contact").value.trim();
+    const msg = document.getElementById("c-msg").value.trim();
+    const gdpr = document.getElementById("c-gdpr").checked;
+    document.getElementById("c-submit").disabled = !(nome && contact && msg && gdpr);
+  }
+  window.checkC = checkC;
+
+  window.submitContact = function(){
+    const btn = document.getElementById("c-submit");
+    btn.disabled = true; btn.textContent = "Invio...";
+    const payload = {
+      _subject: "Messaggio contatti Elyos",
+      tipo: "contatto_generico",
+      nome: document.getElementById("c-nome").value.trim(),
+      contatto: document.getElementById("c-contact").value.trim(),
+      oggetto: document.getElementById("c-oggetto").value,
+      messaggio: document.getElementById("c-msg").value.trim()
+    };
+    fetch("https://formspree.io/f/maqvjayl", {
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body: JSON.stringify(payload)
+    }).then(()=>{
+      document.getElementById("form-cont").style.display="none";
+      document.getElementById("c-success").style.display="block";
+    }).catch(()=>{
+      btn.disabled=false; btn.textContent="Invia messaggio →";
+      alert("Errore. Usa WhatsApp per contattarci.");
+    });
+  };
+});
+</script>
+</body>
+</html>
