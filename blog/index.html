@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="it" style="overflow-x:hidden">
 <head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM98H8YV46"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SM98H8YV46', {
+      'anonymize_ip': true,
+      'send_page_view': true
+    });
+    // Conversion events
+    function trackEvent(name, params) {
+      gtag('event', name, params || {});
+    }
+  </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog — Elyos Ladispoli</title>
@@ -335,7 +350,7 @@ img{max-width:100%;height:auto}
       <div class="bi">✍️</div>
       <h3>Gli articoli sono in preparazione.</h3>
       <p>Stiamo scrivendo contenuti utili su sicurezza elettrica, risparmio energetico e normative. Nel frattempo, se hai domande scrivici direttamente.</p>
-      <button class="btn-wa" onclick="window.open('https://wa.me/393270511938?text=Ciao Elyos, ho una domanda sull%27impianto elettrico','_blank')">💬 Fai una domanda su WhatsApp</button>
+      <button class="btn-wa" onclick="trackEvent('wa_click');window.open('https://wa.me/393270511938?text=Ciao Elyos, ho una domanda sull%27impianto elettrico','_blank')">💬 Fai una domanda su WhatsApp</button>
     </div>
   </div>
 </section>

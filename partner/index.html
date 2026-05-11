@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="it" style="overflow-x:hidden">
 <head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM98H8YV46"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SM98H8YV46', {
+      'anonymize_ip': true,
+      'send_page_view': true
+    });
+    // Conversion events
+    function trackEvent(name, params) {
+      gtag('event', name, params || {});
+    }
+  </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diventa Partner Elettricista — Elyos Ladispoli</title>
@@ -473,7 +488,7 @@ img{max-width:100%;height:auto}
       </p>
       <div class="hero-ctas">
         <button class="btn-hero btn-hero-primary" onclick="scrollToForm()">Voglio diventare partner →</button>
-        <button class="btn-hero btn-hero-secondary" onclick="window.location.href='tel:+393270511938'"><i class="ph ph-phone-call"></i> Parla con noi prima</button>
+        <button class="btn-hero btn-hero-secondary" onclick="trackEvent('phone_click');window.location.href='tel:+393270511938'"><i class="ph ph-phone-call"></i> Parla con noi prima</button>
       </div>
       <div class="hero-proof">
         <div class="proof-item"><i class="ph ph-check-circle"></i> Zero costi di adesione</div>
@@ -731,7 +746,7 @@ img{max-width:100%;height:auto}
         <div style="font-size:52px;margin-bottom:16px">✅</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:10px">Candidatura ricevuta!</h3>
         <p style="font-size:15px;color:var(--text2);line-height:1.7;margin-bottom:24px">Ti ricontatteremo entro <strong style="color:var(--white)">24 ore</strong> per una chiamata conoscitiva veloce.</p>
-        <button onclick="window.open('https://wa.me/393270511938?text=Ciao%2C+ho+appena+inviato+la+candidatura+come+partner+Elyos!','_blank')" style="padding:12px 24px;border:none;border-radius:10px;background:#25D366;color:white;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;cursor:pointer"><i class="ph ph-whatsapp-logo"></i> Scrivici su WhatsApp</button>
+        <button onclick="trackEvent('wa_click');window.open('https://wa.me/393270511938?text=Ciao%2C+ho+appena+inviato+la+candidatura+come+partner+Elyos!','_blank')" style="padding:12px 24px;border:none;border-radius:10px;background:#25D366;color:white;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;cursor:pointer"><i class="ph ph-whatsapp-logo"></i> Scrivici su WhatsApp</button>
       </div>
 
     </div>
@@ -779,7 +794,7 @@ img{max-width:100%;height:auto}
     <p>Candidati in 2 minuti — ti ricontatttiamo entro 24 ore.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1">
       <button class="btn-hero btn-hero-primary" onclick="scrollToForm()">Invia la candidatura →</button>
-      <button class="btn-hero btn-hero-secondary" onclick="window.open('https://wa.me/393270511938?text=Ciao%2C+sono+un+elettricista+e+vorrei+sapere+di+più+sulla+collaborazione+con+Elyos','_blank')">💬 Scrivici prima su WhatsApp</button>
+      <button class="btn-hero btn-hero-secondary" onclick="trackEvent('wa_click');window.open('https://wa.me/393270511938?text=Ciao%2C+sono+un+elettricista+e+vorrei+sapere+di+più+sulla+collaborazione+con+Elyos','_blank')">💬 Scrivici prima su WhatsApp</button>
     </div>
     <div class="final-pills">
       <div class="fpill"><i class="ph ph-check"></i> Nessun costo di adesione</div>
@@ -968,6 +983,7 @@ function checkPqForm() {
 }
 
 function submitPartnerQuiz() {
+  trackEvent('partner_quiz_submit', {form_type:'partner_candidatura'});
   var nome = document.getElementById('pq-nome').value.trim();
   var tel = document.getElementById('pq-tel').value.trim();
   var ditta = document.getElementById('pq-ditta') ? document.getElementById('pq-ditta').value.trim() : '';

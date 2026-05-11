@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="it" style="overflow-x:hidden">
 <head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM98H8YV46"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SM98H8YV46', {
+      'anonymize_ip': true,
+      'send_page_view': true
+    });
+    // Conversion events
+    function trackEvent(name, params) {
+      gtag('event', name, params || {});
+    }
+  </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contatti — Elyos Ladispoli</title>
