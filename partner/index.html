@@ -613,55 +613,38 @@ img{max-width:100%;height:auto}
 
 <!-- FORM -->
 
-<!-- PRE-FORM TRUST BUILDER -->
-<section style="padding:0 0 0;background:var(--dark)">
-  <div class="container">
-    <div style="max-width:680px;margin:0 auto;padding:0 0 48px">
-
-      <!-- Steps -->
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px">
-        <div style="background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:20px;text-align:center;position:relative">
-          <div style="width:32px;height:32px;border-radius:50%;background:var(--orange);color:white;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;margin:0 auto 12px">1</div>
-          <div style="font-size:13px;font-weight:600;color:var(--white);margin-bottom:4px">Compili il quiz</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.5">4 domande, 2 minuti. Nessun dato bancario.</div>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:20px;text-align:center">
-          <div style="width:32px;height:32px;border-radius:50%;background:var(--orange);color:white;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;margin:0 auto 12px">2</div>
-          <div style="font-size:13px;font-weight:600;color:var(--white);margin-bottom:4px">Ti richiamiamo</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.5">Entro 24 ore — chiamata di 10 minuti per conoscerci.</div>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:20px;text-align:center">
-          <div style="width:32px;height:32px;border-radius:50%;background:var(--orange);color:white;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;margin:0 auto 12px">3</div>
-          <div style="font-size:13px;font-weight:600;color:var(--white);margin-bottom:4px">Ricevi lavori</div>
-          <div style="font-size:12px;color:var(--text2);line-height:1.5">Iniziamo a mandarti interventi già qualificati.</div>
-        </div>
-      </div>
-
-      <!-- Reassurance strip -->
-      <div style="background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:14px;margin-bottom:40px">
-        <i class="ph ph-shield-check" style="font-size:28px;color:#22C55E;flex-shrink:0"></i>
-        <div>
-          <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:3px">Nessun rischio. Nessun costo. Zero impegno forzato.</div>
-          <div style="font-size:13px;color:var(--text2);line-height:1.5">Se dopo la chiamata non vuoi procedere, nessun problema. Non firmi nulla oggi. Non paghi nulla mai.</div>
-        </div>
-      </div>
-
-      <!-- Arrow pointing down -->
-      <div style="text-align:center;margin-bottom:-20px">
-        <i class="ph ph-arrow-down" style="font-size:28px;color:var(--orange);animation:bounce 1.5s infinite"></i>
-      </div>
-    </div>
-  </div>
-</section>
-<style>
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
-</style>
-
 <section id="form-partner" style="padding:88px 0">
   <div class="container">
     <div class="section-label">Candidatura</div>
     <h2 class="section-title" style="margin-bottom:8px">Sei quello che<br>cerchiamo?</h2>
     <p class="section-desc" style="margin-bottom:48px">4 domande veloci. Scopri subito se puoi entrare nella rete Elyos.</p>
+
+    <!-- 3-step minimal graphic -->
+    <div style="display:flex;align-items:center;gap:0;margin:28px auto 36px;max-width:500px">
+      <div style="text-align:center;flex:1">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--orange,#FF6B2B);color:white;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">1</div>
+        <div style="font-size:12px;font-weight:600;color:var(--white);margin-bottom:2px">Quiz</div>
+        <div style="font-size:11px;color:var(--text2)">2 minuti</div>
+      </div>
+      <div style="flex:1;height:1px;background:linear-gradient(90deg,var(--orange,#FF6B2B),rgba(255,107,43,.3));margin-bottom:20px"></div>
+      <div style="text-align:center;flex:1">
+        <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,107,43,.15);border:1.5px solid var(--orange,#FF6B2B);color:var(--orange,#FF6B2B);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">2</div>
+        <div style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:2px">Chiamata</div>
+        <div style="font-size:11px;color:var(--text3)">entro 24h</div>
+      </div>
+      <div style="flex:1;height:1px;background:rgba(255,255,255,.1);margin-bottom:20px"></div>
+      <div style="text-align:center;flex:1">
+        <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,107,43,.08);border:1.5px solid rgba(255,107,43,.25);color:var(--text3);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">3</div>
+        <div style="font-size:12px;font-weight:600;color:var(--text3);margin-bottom:2px">Lavori</div>
+        <div style="font-size:11px;color:var(--text3)">iniziano</div>
+      </div>
+    </div>
+    <!-- reassurance pill -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:36px">
+      <i class="ph ph-shield-check" style="font-size:14px;color:var(--green,#22C55E)"></i>
+      <span style="font-size:12px;color:var(--text2)">Nessun costo · Nessun impegno · Zero rischio</span>
+    </div>
+
 
     <!-- QUIZ WIZARD -->
     <div id="partner-quiz" style="max-width:600px;margin:0 auto">
