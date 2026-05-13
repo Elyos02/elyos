@@ -17,6 +17,10 @@
     }
   </script>
 <meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elyos — Elettricisti verificati a Ladispoli</title>
 <meta name="theme-color" content="#080C18">
@@ -281,19 +285,6 @@ img{max-width:100%;height:auto}
   .services-list,.pc-services{grid-template-columns:1fr 1fr !important}
 }
 
-
-/* ═══ GALLERY ═══ */
-.gallery-section{padding:80px 0;background:var(--dark)}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
-.gallery-item{border-radius:14px;overflow:hidden;aspect-ratio:4/3;position:relative;background:var(--card,#0E1828);border:1px solid var(--border)}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.3s}
-.gallery-item:hover img{transform:scale(1.03)}
-.gallery-label{position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(8,12,24,.85));font-size:11px;font-weight:500;color:#F0F4FF}
-.gallery-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--text3)}
-.gallery-placeholder i{font-size:28px}
-.gallery-placeholder span{font-size:12px}
-@media(max-width:640px){.gallery-grid{grid-template-columns:1fr 1fr;gap:8px}}
-
 </style>
 
   <!-- ═══ SEO: Open Graph ═══ -->
@@ -311,28 +302,12 @@ img{max-width:100%;height:auto}
   <meta name="twitter:description" content="Elyos coordina una rete di tecnici elettrici certificati a Ladispoli. Pronto intervento, sopralluogo e preventivo. Il tecnico arriva, lavora, hai finito.">
   <!-- Canonical: dice a Google qual è l'URL ufficiale, evita penalità contenuto duplicato -->
   <link rel="canonical" href="https://elyos.it/">
-  <!-- Meta Pixel -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window,document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '828592843643428');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=828592843643428&ev=PageView&noscript=1"/></noscript>
-  <!-- End Meta Pixel -->
 </head>
 <body>
 <nav id="main-nav">
   <div class="nav-inner">
     <a href="/" class="logo">
-      <svg viewBox="0 0 28 28" fill="none"><path d="M16 2L4 16H13L12 26L24 12H15L16 2Z" fill="#FF6B1A"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" width="26" height="26"><path d="M60 5 L10 20 V65 C10 95 55 120 60 125 C65 120 110 95 110 65 V20 Z" fill="none" stroke="#FF6600" stroke-width="10" stroke-linejoin="round"/><path d="M65 25 L35 70 H60 L55 105 L85 60 H60 Z" fill="#FF6600"/></svg>
       Elyos
     </a>
     <div class="nav-links" id="nav-links">
@@ -452,6 +427,57 @@ img{max-width:100%;height:auto}
   </div>
 </section>
 
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="container">
+    <h2>Hai bisogno di un<br>elettricista adesso?</h2>
+    <p>Descrivici il problema — ti rispondiamo in meno di 10 minuti.</p>
+    <div class="cta-btns">
+      <button class="btn-lg btn-lg-primary" onclick="window.location.href='/interventi/'">⚡ Richiedi intervento</button>
+      <button class="btn-lg btn-lg-ghost" onclick="trackEvent('wa_click');window.open('https://wa.me/393270511938?text=Ciao Elyos, ho bisogno di assistenza elettrica','_blank')">💬 Scrivi su WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY LAVORI -->
+<section style="padding:80px 0;background:var(--dark,#080E1C);border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="section-label">Lavori reali</div>
+    <h2 class="section-title">Foto dai nostri interventi.</h2>
+    <p class="section-desc">Quadri elettrici, fotovoltaico, illuminazione LED. Lavori reali eseguiti dai partner Elyos sul territorio di Ladispoli.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px">
+      <div style="border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--dark2,#0E1828);border:1px solid var(--border)">
+        <img src="img/gallery/17-parete-led-curva.jpg" alt="Parete decorativa con LED curva e intonaco ondulato" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:.3s;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(8,12,24,.85));font-size:11px;font-weight:500;color:#F0F4FF">Design LED su parete — Ladispoli</div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--dark2,#0E1828);border:1px solid var(--border)">
+        <img src="img/gallery/08-soffitto-led-geometrico.jpg" alt="Soffitto con tre cornici LED geometriche rettangolari" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:.3s;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(8,12,24,.85));font-size:11px;font-weight:500;color:#F0F4FF">Soffitto LED geometrico — Ladispoli</div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--dark2,#0E1828);border:1px solid var(--border)">
+        <img src="img/gallery/09-quadro-hager.jpg" alt="Quadro elettrico Hager con sportello trasparente" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:.3s;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(8,12,24,.85));font-size:11px;font-weight:500;color:#F0F4FF">Quadro elettrico — Ladispoli</div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--dark2,#0E1828);border:1px solid var(--border)">
+        <img src="img/gallery/01-pannelli-solari-tetto.jpg" alt="Pannelli solari in installazione su tetto in tegole" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:.3s;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(8,12,24,.85));font-size:11px;font-weight:500;color:#F0F4FF">Fotovoltaico su tetto — Ladispoli</div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--dark2,#0E1828);border:1px solid var(--border)">
+        <img src="img/gallery/07-bagno-specchio-led.jpg" alt="Bagno con specchio retroilluminato LED forma organica" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:.3s;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(8,12,24,.85));font-size:11px;font-weight:500;color:#F0F4FF">Specchio LED bagno — Cerveteri</div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:var(--dark2,#0E1828);border:1px solid var(--border)">
+        <img src="img/gallery/11-quadro-eaton.jpg" alt="Quadro EATON con interruttori etichettati per ogni circuito" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:.3s;display:block">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 10px;background:linear-gradient(transparent,rgba(8,12,24,.85));font-size:11px;font-weight:500;color:#F0F4FF">Quadro elettrico EATON — Cerenova</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="/interventi/" style="display:inline-block;padding:10px 24px;border:1px solid rgba(255,107,26,.4);border-radius:8px;font-size:13px;font-weight:600;color:var(--orange,#FF6B2B);text-decoration:none">Vedi tutti i lavori →</a>
+    </div>
+  </div>
+</section>
+
+
 <!-- PARTNER TRUST SECTION -->
 <section style="padding:88px 0;background:var(--dark2,#080E1C);border-top:1px solid var(--border)">
   <div class="container">
@@ -515,62 +541,12 @@ img{max-width:100%;height:auto}
   </div>
 </section>
 
-
-<!-- GALLERY LAVORI -->
-<section class="gallery-section">
-  <div class="container">
-    <div class="section-label">Lavori reali</div>
-    <h2 class="section-title">Foto dai nostri interventi.</h2>
-    <p class="section-desc">Lavori eseguiti dai partner Elyos a Ladispoli e zone limitrofe. Impianti, quadri elettrici, pronto intervento.</p>
-    <div class="gallery-grid" id="photoGallery">
-      <div class="gallery-item">
-        <img src="img/gallery/17-parete-led-curva.jpg" alt="Design LED su parete curva con intonaco ondulato" loading="lazy">
-        <div class="gallery-label">Design LED — zona Ladispoli</div>
-      </div>
-      <div class="gallery-item">
-        <img src="img/gallery/08-soffitto-led-geometrico.jpg" alt="Soffitto con cornici LED geometriche" loading="lazy">
-        <div class="gallery-label">Soffitto LED — Cerveteri</div>
-      </div>
-      <div class="gallery-item">
-        <img src="img/gallery/05-salone-soffitto-led.jpg" alt="Salone con soffitto LED integrato" loading="lazy">
-        <div class="gallery-label">Salone LED — Ladispoli</div>
-      </div>
-      <div class="gallery-item">
-        <img src="img/gallery/01-pannelli-solari-tetto.jpg" alt="Installazione pannelli solari su tetto in tegole" loading="lazy">
-        <div class="gallery-label">Fotovoltaico — Ladispoli nord</div>
-      </div>
-      <div class="gallery-item">
-        <img src="img/gallery/09-quadro-hager.jpg" alt="Quadro elettrico Hager installato" loading="lazy">
-        <div class="gallery-label">Quadro elettrico — Ladispoli centro</div>
-      </div>
-      <div class="gallery-item">
-        <img src="img/gallery/07-bagno-specchio-led.jpg" alt="Bagno con specchio retroilluminato LED" loading="lazy">
-        <div class="gallery-label">Bagno LED — Ladispoli</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<div class="cta-band">
-  <div class="container">
-    <h2>Hai bisogno di un<br>elettricista adesso?</h2>
-    <p>Descrivici il problema — ti rispondiamo in meno di 10 minuti.</p>
-    <div class="cta-btns">
-      <button class="btn-lg btn-lg-primary" onclick="window.location.href='/interventi/'">⚡ Richiedi intervento</button>
-      <button class="btn-lg btn-lg-ghost" onclick="trackEvent('wa_click');window.open('https://wa.me/393270511938?text=Ciao Elyos, ho bisogno di assistenza elettrica','_blank')">💬 Scrivi su WhatsApp</button>
-    </div>
-  </div>
-</div>
-
-
-
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <svg viewBox="0 0 28 28" fill="none" width="24" height="24"><path d="M16 2L4 16H13L12 26L24 12H15L16 2Z" fill="#FF6B2B"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" width="24" height="24"><path d="M60 5 L10 20 V65 C10 95 55 120 60 125 C65 120 110 95 110 65 V20 Z" fill="none" stroke="#FF6600" stroke-width="10" stroke-linejoin="round"/><path d="M65 25 L35 70 H60 L55 105 L85 60 H60 Z" fill="#FF6600"/></svg>
           Elyos
         </div>
         <p>Rete di tecnici elettrici verificati a Ladispoli. Coordiniamo l'intervento, garantiamo la qualità.</p>
