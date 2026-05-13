@@ -17,10 +17,6 @@
     }
   </script>
 <meta charset="UTF-8">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interventi Elettrici a Ladispoli — Elyos</title>
 <meta name="theme-color" content="#080C18">
@@ -536,6 +532,18 @@ img{max-width:100%;height:auto}
   .services-list,.pc-services{grid-template-columns:1fr 1fr !important}
 }
 
+
+/* ═══ GALLERY ═══ */
+.gallery-section{padding:80px 0;background:var(--dark)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.gallery-item{border-radius:14px;overflow:hidden;aspect-ratio:4/3;position:relative;background:var(--card,#0E1828);border:1px solid var(--border)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.3s}
+.gallery-item:hover img{transform:scale(1.03)}
+.gallery-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--text3)}
+.gallery-placeholder i{font-size:28px}
+.gallery-placeholder span{font-size:12px}
+@media(max-width:640px){.gallery-grid{grid-template-columns:1fr 1fr;gap:8px}}
+
 </style>
 
   <!-- ═══ SEO: Open Graph ═══ -->
@@ -553,12 +561,28 @@ img{max-width:100%;height:auto}
   <meta name="twitter:description" content="Blackout, salvavita che scatta, nuovo impianto? Elyos manda il tecnico giusto a Ladispoli entro ore. Pronto intervento e preventivi chiari.">
   <!-- Canonical: dice a Google qual è l'URL ufficiale, evita penalità contenuto duplicato -->
   <link rel="canonical" href="https://elyos.it/interventi/">
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '828592843643428');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=828592843643428&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel -->
 </head>
 <body>
 <nav id="main-nav">
   <div class="nav-inner">
     <a href="/" class="logo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" width="26" height="26"><path d="M60 5 L10 20 V65 C10 95 55 120 60 125 C65 120 110 95 110 65 V20 Z" fill="none" stroke="#FF6600" stroke-width="10" stroke-linejoin="round"/><path d="M65 25 L35 70 H60 L55 105 L85 60 H60 Z" fill="#FF6600"/></svg>
+      <svg viewBox="0 0 28 28" fill="none"><path d="M16 2L4 16H13L12 26L24 12H15L16 2Z" fill="#FF6B1A"/></svg>
       Elyos
     </a>
     <div class="nav-links" id="nav-links">
@@ -943,29 +967,28 @@ img{max-width:100%;height:auto}
         <p style="font-size:13px;color:var(--text2);margin-bottom:16px"><i class="ph ph-camera"></i> Foto reali degli interventi eseguiti dai nostri partner sul territorio.</p>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&auto=format" alt="Quadro elettrico installato" onerror="this.parentElement.style.background='#1A2340'">
+            <img src="../img/gallery/09-quadro-hager.jpg" alt="Quadro elettrico Hager installato" loading="lazy">
             <div class="gallery-label">Quadro elettrico — Ladispoli centro</div>
           </div>
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop&auto=format" alt="Impianto nuovo" onerror="this.parentElement.style.background='#1A2340'">
-            <div class="gallery-label">Impianto nuovo — Cerenova</div>
+            <img src="../img/gallery/11-quadro-eaton-etichettato.jpg" alt="Quadro EATON con interruttori etichettati" loading="lazy">
+            <div class="gallery-label">Quadro EATON — Cerenova</div>
           </div>
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop&auto=format" alt="Cablaggio professionale" onerror="this.parentElement.style.background='#1A2340'">
-            <div class="gallery-label">Cablaggio professionale — Cerveteri</div>
+            <img src="../img/gallery/12-quadro-stringhe-fotovoltaico.jpg" alt="Quadro stringhe fotovoltaico" loading="lazy">
+            <div class="gallery-label">Impianto fotovoltaico — Cerveteri</div>
           </div>
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop&auto=format" alt="Posa impianto" onerror="this.parentElement.style.background='#1A2340'">
-            <div class="gallery-label">Posa impianto — Marina di S. Nicola</div>
+            <img src="../img/gallery/03-parete-tv-led.jpg" alt="Parete TV con retroilluminazione LED" loading="lazy">
+            <div class="gallery-label">Illuminazione LED — Marina di S. Nicola</div>
           </div>
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1609921205586-7e8a57516512?w=400&h=300&fit=crop&auto=format" alt="Intervento urgente" onerror="this.parentElement.style.background='#1A2340'">
-            <div class="gallery-label">Pronto intervento — Ladispoli</div>
+            <img src="../img/gallery/07-bagno-specchio-led.jpg" alt="Bagno con specchio retroilluminato LED" loading="lazy">
+            <div class="gallery-label">Bagno LED — Ladispoli</div>
           </div>
-          <div class="gallery-item" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;cursor:default">
-            <div style="font-size:28px"><i class="ph ph-camera-plus" style="font-size:28px"></i></div>
-            <div style="font-size:12px;color:var(--text2);text-align:center;padding:0 12px">Le tue foto qui — inviaci gli scatti dei lavori</div>
-            <a href="https://wa.me/393270511938?text=Ciao%2C+vi+mando+le+foto+dei+lavori+svolti" style="font-size:11px;color:var(--orange);font-weight:600;text-decoration:underline">Invia su WhatsApp →</a>
+          <div class="gallery-item">
+            <img src="../img/gallery/01-pannelli-solari-tetto.jpg" alt="Pannelli solari in installazione su tetto" loading="lazy">
+            <div class="gallery-label">Fotovoltaico — Ladispoli nord</div>
           </div>
         </div>
       </div>
@@ -1012,9 +1035,73 @@ img{max-width:100%;height:auto}
       </div>
 
       <div class="partner-invite">
-        <i class="ph ph-handshake"></i> Sei un elettricista a Ladispoli? <a href="https://wa.me/393270511938?text=Ciao%2C+vorrei+collaborare+con+Elyos+come+partner">Entra nella rete →</a>
+        <i class="ph ph-handshake"></i> Sei un elettricista a Ladispoli? <a href="/partner/#form-partner">Candidati ora — è gratis →</a>
       </div>
     </div>
+
+
+<!-- GALLERY LAVORI -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-label">Lavori reali</div>
+    <h2 class="section-title">Foto dai nostri interventi.</h2>
+    <p class="section-desc">Lavori eseguiti dai partner Elyos a Ladispoli e zone limitrofe. Impianti, quadri elettrici, pronto intervento.</p>
+    <div class="gallery-grid" id="photoGallery">
+      <div class="gallery-item">
+        <img src="../img/gallery/17-parete-led-curva.jpg" alt="Parete decorativa con LED curvi e intonaco ondulato" loading="lazy">
+        <div class="gallery-label">Design LED su parete — zona Ladispoli</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/08-soffitto-led-geometrico.jpg" alt="Soffitto con cornici LED geometriche rettangolari" loading="lazy">
+        <div class="gallery-label">Soffitto LED geometrico — Cerveteri</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/05-salone-soffitto-led.jpg" alt="Salone moderno con soffitto LED e mobile tv" loading="lazy">
+        <div class="gallery-label">Salone con soffitto LED — Ladispoli</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/10-colonna-led-camino.jpg" alt="Colonna decorativa in cartongesso con LED a zigzag e camino" loading="lazy">
+        <div class="gallery-label">Colonna LED + camino — zona nord</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/13-soffitto-pannello-led.jpg" alt="Soffitto con pannello grigio e LED perimetrale" loading="lazy">
+        <div class="gallery-label">Pannello soffitto LED — Cerenova</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/02-esterno-edificio-moderno.jpg" alt="Esterno edificio moderno con persiane e illuminazione" loading="lazy">
+        <div class="gallery-label">Impianto esterno — Marina di S. Nicola</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/04-inverter-batterie-deye.jpg" alt="Inverter Deye con wallbox e batteria" loading="lazy">
+        <div class="gallery-label">Inverter + accumulo — Ladispoli</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/16-inverter-azzurro-batterie.jpg" alt="Inverter Azzurro ZCS con batterie di accumulo" loading="lazy">
+        <div class="gallery-label">Sistema fotovoltaico — Cerveteri</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/15-pannelli-solari-primo-piano.jpg" alt="Primo piano pannelli solari fotovoltaici" loading="lazy">
+        <div class="gallery-label">Pannelli fotovoltaici — zona Ladispoli</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/14-montaggio-interruttori-eaton.jpg" alt="Montaggio interruttori EATON per nuovo quadro" loading="lazy">
+        <div class="gallery-label">Realizzazione quadro — Ladispoli centro</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/06-cartongesso-in-costruzione.jpg" alt="Lavori in corso soffitto cartongesso" loading="lazy">
+        <div class="gallery-label">Lavori cartongesso — Cerveteri</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/18-tecnico-lavoro.jpg" alt="Tecnico durante installazione impianto elettrico" loading="lazy">
+        <div class="gallery-label">Intervento su impianto — zona Ladispoli</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../img/gallery/19-illuminazione-museo.jpg" alt="Illuminazione professionale galleria con binario LED" loading="lazy">
+        <div class="gallery-label">Illuminazione professionale — Cerveteri</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- PROBLEMI -->
 <section class="problems-section">
@@ -1111,7 +1198,7 @@ img{max-width:100%;height:auto}
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" width="24" height="24"><path d="M60 5 L10 20 V65 C10 95 55 120 60 125 C65 120 110 95 110 65 V20 Z" fill="none" stroke="#FF6600" stroke-width="10" stroke-linejoin="round"/><path d="M65 25 L35 70 H60 L55 105 L85 60 H60 Z" fill="#FF6600"/></svg>
+          <svg viewBox="0 0 28 28" fill="none" width="24" height="24"><path d="M16 2L4 16H13L12 26L24 12H15L16 2Z" fill="#FF6B1A"/></svg>
           Elyos
         </div>
         <p>Rete di tecnici elettrici verificati a Ladispoli. Coordiniamo l'intervento, garantiamo la qualità.</p>
