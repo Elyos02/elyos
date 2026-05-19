@@ -119,7 +119,7 @@ h1.article-title{font-size:clamp(38px,5.5vw,68px);font-weight:900;color:var(--wh
 .faq-item.open .faq-a{display:block}
 
 /* CTA BAND */
-.article-cta{margin-top:56px;background:linear-gradient(135deg,rgba(255,107,43,.08),rgba(27,111,216,.04));border:1px solid rgba(255,107,43,.18);border-radius:20px;padding:40px 36px;text-align:center}
+.article-cta{background:linear-gradient(135deg,rgba(255,107,43,.1) 0%,rgba(27,111,216,.06) 100%);border:1px solid rgba(255,107,43,.2);border-radius:20px;padding:40px 36px;margin-top:52px;text-align:center}
 .article-cta h2{font-size:clamp(24px,3.5vw,36px);font-weight:800;color:var(--white);margin-bottom:10px}
 .article-cta p{font-size:15px;color:var(--text2);margin-bottom:24px}
 .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -148,6 +148,27 @@ h1.article-title{font-size:clamp(38px,5.5vw,68px);font-weight:900;color:var(--wh
   .article-cta{padding:28px 20px}
   .cta-row .btn-orange,.cta-row .btn-ghost{width:100%;text-align:center}
 }
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.article-grid{display:grid;grid-template-columns:1fr 300px;gap:52px;align-items:start}
+.article-sidebar{position:sticky;top:84px;display:flex;flex-direction:column;gap:16px}
+.sb-cta{background:linear-gradient(160deg,rgba(255,107,43,.13) 0%,rgba(255,107,43,.04) 100%);border:1px solid rgba(255,107,43,.22);border-radius:18px;padding:26px}
+.sb-cta-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.sb-cta h3{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:800;color:var(--white);margin-bottom:8px;line-height:1.1}
+.sb-cta p{font-size:13px;color:var(--text2);margin-bottom:18px;line-height:1.6}
+.sb-btn{display:block;width:100%;padding:12px;border:none;border-radius:10px;font-family:"Outfit",sans-serif;font-size:13px;font-weight:600;text-align:center;cursor:pointer;transition:.2s;margin-bottom:9px}
+.sb-btn.orange{background:var(--orange);color:white}
+.sb-btn.orange:hover{background:var(--orange-l)}
+.sb-btn.wa{background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.22);color:#25D366}
+.sb-btn.wa:hover{background:rgba(37,211,102,.18)}
+.sb-related{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px}
+.sb-related-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);transition:.2s;color:var(--text2);font-size:13px;line-height:1.4}
+.related-item:last-child{border-bottom:none;padding-bottom:0}
+.related-item:hover{color:var(--text)}
+.related-item:first-child{padding-top:0}
+.rel-icon{width:32px;height:32px;border-radius:8px;background:var(--dark3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+@media(max-width:860px){.article-grid{grid-template-columns:1fr}.article-sidebar{position:static}}
+.article-wrap{padding:60px 0 80px}
 html,body{max-width:100%;overflow-x:hidden}
 img{max-width:100%;height:auto}
 </style>
@@ -187,6 +208,10 @@ img{max-width:100%;height:auto}
     </div>
   </div>
 </div>
+<section class="article-wrap">
+  <div class="container">
+    <div class="article-grid">
+      <div class="article-content">
 <div class="article-body">
 
 <p>Chi ha una casa sul litorale romano lo sa: le cose si rovinano prima che in città. Il sale nell'aria, l'umidità costante. L'impianto elettrico non fa eccezione — anzi, è spesso uno dei componenti più sensibili all'ambiente marino e uno dei più ignorati.</p>
@@ -231,23 +256,48 @@ img{max-width:100%;height:auto}
 <div class="article-cta">
   <h2>Hai una casa al mare sul litorale?</h2>
   <p>I tecnici Elyos conoscono il territorio di Ladispoli, Cerveteri e Cerenova. Sopralluogo gratuito, prezzi comunicati prima di iniziare.</p>
-  <div class="cta-row">
+  <div class="cta-btns">
     <a href="/interventi/" class="btn-orange">Prenota sopralluogo gratuito</a>
-    <a href="https://wa.me/393270511938" class="btn-ghost">💬 WhatsApp</a>
+    <a href="https://wa.me/393270511938" class="btn-ghost"><i class="ph ph-chat-circle-dots"></i> WhatsApp</a>
   </div>
 </div>
 
-</div>
-<div class="related-section">
-  <h3>Leggi anche</h3>
-  <div class="related-grid">
-<a href="/blog/segnali-impianto-elettrico-da-controllare/" class="related-card"><div class="ico">⚡</div><span>5 segnali che l'impianto va controllato</span></a>
-<a href="/blog/cosa-fare-quando-scatta-il-salvavita/" class="related-card"><div class="ico">🏠</div><span>Cosa fare quando scatta il salvavita</span></a>
-<a href="/blog/quadro-elettrico-quando-sostituirlo/" class="related-card"><div class="ico">🛡️</div><span>Quadro elettrico: quando sostituirlo</span></a>
-<a href="/blog/dichiarazione-conformita-impianto-elettrico/" class="related-card"><div class="ico">🔌</div><span>Dichiarazione di conformità</span></a>
+      </div><!-- /article-content -->
 
-  </div>
-</div>
+      <!-- SIDEBAR -->
+      <aside class="article-sidebar">
+        <div class="sb-cta">
+          <div class="sb-cta-label"><i class="ph ph-lightning" style="color:var(--orange)"></i> Pronto intervento</div>
+          <h3>Hai un impianto da controllare?</h3>
+          <p>Sopralluogo gratuito a Ladispoli e dintorni. Prezzi comunicati prima di iniziare.</p>
+          <a href="/interventi/" class="sb-btn orange">Richiedi sopralluogo</a>
+          <a href="https://wa.me/393270511938" class="sb-btn wa"><i class="ph ph-chat-circle-dots"></i> WhatsApp</a>
+        </div>
+        <div class="sb-related">
+          <div class="sb-related-label">Leggi anche</div>
+          <a href="/blog/segnali-impianto-elettrico-da-controllare/" class="related-item">
+            <div class="rel-icon"><i class="ph ph-lightning" style="color:var(--orange)"></i></div>
+            5 segnali che l'impianto va controllato
+          </a>
+          <a href="/blog/cosa-fare-quando-scatta-il-salvavita/" class="related-item">
+            <div class="rel-icon"><i class="ph ph-house-line" style="color:var(--blue)"></i></div>
+            Cosa fare quando scatta il salvavita
+          </a>
+          <a href="/blog/come-ridurre-consumi-elettrici-casa/" class="related-item">
+            <div class="rel-icon"><i class="ph ph-lightbulb" style="color:#22C55E"></i></div>
+            Come ridurre i consumi elettrici
+          </a>
+          <a href="/blog/quadro-elettrico-quando-sostituirlo/" class="related-item">
+            <div class="rel-icon"><i class="ph ph-shield-check" style="color:#7C3AED"></i></div>
+            Quadro elettrico: quando sostituirlo
+          </a>
+        </div>
+      </aside>
+
+    </div><!-- /article-grid -->
+  </div><!-- /container -->
+</section><!-- /article-wrap -->
+
 <footer>
   <div class="container">
     <div class="footer-grid">

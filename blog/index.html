@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="it" style="overflow-x:hidden">
 <head>
-  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM98H8YV46"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-SM98H8YV46', {
-      'anonymize_ip': true,
-      'send_page_view': true
-    });
-    // Conversion events
-    function trackEvent(name, params) {
-      gtag('event', name, params || {});
-    }
+    gtag('config', 'G-SM98H8YV46', {'anonymize_ip': true, 'send_page_view': true});
   </script>
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -29,6 +21,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elyos">
+<meta property="og:url" content="https://elyos.it/blog/">
+<meta property="og:title" content="Blog — Consigli elettrici e news da Ladispoli | Elyos">
+<meta property="og:description" content="Articoli pratici su impianti elettrici, manutenzione e sicurezza. Scritti da chi lavora ogni giorno a Ladispoli.">
+<meta property="og:image" content="https://elyos.it/og-home.jpg">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — Consigli elettrici e news da Ladispoli | Elyos">
+<meta name="twitter:description" content="Articoli pratici su impianti elettrici, manutenzione e sicurezza. Scritti da chi lavora ogni giorno a Ladispoli.">
+<link rel="canonical" href="https://elyos.it/blog/">
 <style>
 
 :root{
@@ -109,36 +112,21 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 0
 .section-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--azure);margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .section-label::before{content:"";display:inline-block;width:18px;height:2px;background:var(--azure);border-radius:2px}
 .section-title{font-size:clamp(34px,4.5vw,54px);font-weight:800;color:var(--white);margin-bottom:14px}
-.section-desc{font-size:15px;color:var(--text2);max-width:520px;line-height:1.75}
-.status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);animation:pd 2s infinite;display:inline-block}
-@keyframes pd{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* MOBILE */
-@media(max-width:860px){
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(6,11,20,.98);border-bottom:1px solid var(--border);flex-direction:column;padding:16px;gap:2px}
-  .nav-links.open{display:flex}
-  .hamburger{display:flex}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
-  .footer-brand{grid-column:1/-1}
-}
-@media(max-width:560px){
-  .footer-grid{grid-template-columns:1fr}
-  .footer-brand{grid-column:auto}
-  .nav-ctas .btn-nav-cta{display:none}
-  .cookie-bar{flex-direction:column;align-items:flex-start}
-}
-
+/* PAGE */
 .page-hero{padding:140px 0 60px;position:relative;overflow:hidden;text-align:center}
 .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 40% at 50% 0%,rgba(14,165,233,.1) 0%,transparent 70%),var(--dark)}
 .page-hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
 .page-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(14,165,233,.08);border:1px solid rgba(14,165,233,.2);border-radius:999px;padding:5px 14px;font-size:11px;font-weight:600;color:var(--azure);letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
 .page-title{font-size:clamp(44px,6vw,76px);font-weight:900;color:var(--white);margin-bottom:14px}
 .page-desc{font-size:16px;color:var(--text2);line-height:1.75}
+
+/* BLOG GRID */
 .blog-section{padding:60px 0 96px}
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
 .blog-card{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s;cursor:pointer;text-decoration:none;display:block}
 .blog-card:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
-.blog-thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:48px;border-bottom:1px solid var(--border)}
+.blog-thumb{height:180px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border)}
 .blog-thumb.t1{background:linear-gradient(135deg,rgba(255,107,26,.15),rgba(255,107,26,.05))}
 .blog-thumb.t2{background:linear-gradient(135deg,rgba(27,111,216,.15),rgba(27,111,216,.05))}
 .blog-thumb.t3{background:linear-gradient(135deg,rgba(34,197,94,.15),rgba(34,197,94,.05))}
@@ -150,96 +138,30 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 0
 .blog-card h3{font-size:18px;font-weight:700;color:var(--white);margin-bottom:8px;line-height:1.3}
 .blog-card p{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:14px}
 .blog-meta{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--text3)}
-.blog-meta span{font-weight:500;color:var(--azure)}
-.blog-coming{text-align:center;padding:80px 24px;background:var(--card);border:2px dashed var(--border2);border-radius:20px;margin-top:24px}
-.blog-coming .bi{font-size:48px;margin-bottom:16px}
-.blog-coming h3{font-size:24px;font-weight:700;color:var(--white);margin-bottom:8px}
-.blog-coming p{font-size:14px;color:var(--text2);margin-bottom:24px}
-.btn-wa{padding:12px 24px;border:none;border-radius:10px;background:#25D366;color:white;font-family:"Outfit",sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:.2s}
-.btn-wa:hover{background:#1ebe5d}
-@media(max-width:860px){.blog-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.blog-grid{grid-template-columns:1fr}}
+.blog-meta span:first-child{color:var(--text3)}
+.blog-meta span:last-child{font-weight:500;color:var(--azure)}
 
-/* ═══ GLOBAL MOBILE OVERFLOW FIX ═══ */
+/* MOBILE */
+@media(max-width:860px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(6,11,20,.98);border-bottom:1px solid var(--border);flex-direction:column;padding:16px;gap:2px}
+  .nav-links.open{display:flex}
+  .hamburger{display:flex}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .footer-brand{grid-column:1/-1}
+  .blog-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .footer-grid{grid-template-columns:1fr}
+  .footer-brand{grid-column:auto}
+  .nav-ctas .btn-nav-cta{display:none}
+  .cookie-bar{flex-direction:column;align-items:flex-start}
+  .blog-grid{grid-template-columns:1fr}
+}
 html,body{max-width:100%;overflow-x:hidden}
 *{box-sizing:border-box}
 img{max-width:100%;height:auto}
-
-/* ═══ RESPONSIVE GRIDS — fix all overflow on mobile ═══ */
-@media(max-width:640px){
-  /* Any 4-col or 3-col grid becomes 2-col on mobile */
-  [style*="grid-template-columns:repeat(4"],[style*="grid-template-columns: repeat(4"]{
-    grid-template-columns:1fr 1fr !important;
-  }
-  [style*="grid-template-columns:repeat(3"],[style*="grid-template-columns: repeat(3"]{
-    grid-template-columns:1fr 1fr !important;
-  }
-  /* 1fr auto grids (CTA sections) become single column */
-  [style*="grid-template-columns:1fr auto"],[style*="grid-template-columns: 1fr auto"]{
-    grid-template-columns:1fr !important;
-  }
-  /* 2-col grids with large content become 1-col */
-  [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"]{
-    grid-template-columns:1fr !important;
-  }
-  /* Flex rows become column */
-  .partner-meta,.pc-meta{flex-direction:column;gap:8px}
-}
-@media(max-width:480px){
-  [style*="grid-template-columns:1fr 1fr"]{
-    grid-template-columns:1fr !important;
-  }
-}
-
-/* ═══ CTA SECTION MOBILE ═══ */
-@media(max-width:640px){
-  /* Partner CTA band */
-  .cta-band{padding:48px 0}
-  .cta-band h2{font-size:clamp(28px,7vw,44px)}
-  /* Become partner CTA section */
-  section[style*="padding:72px 0"]{padding:48px 0 !important}
-  /* Fix min-width:200px on button column */
-  [style*="min-width:200px"]{min-width:0 !important;width:100%}
-  [style*="min-width:200px"] a{width:100%;justify-content:center}
-}
-
-/* ═══ PARTNER CARDS MOBILE ═══ */
-.partner-card-link{display:block;text-decoration:none;color:inherit;transition:.25s}
-.partner-card-link:hover .pc-inner{border-color:rgba(255,107,43,.3)}
-
-/* ═══ PARTNER TRUST SECTION MOBILE ═══ */
-@media(max-width:640px){
-  .trust-partners-grid{
-    display:flex !important;
-    flex-direction:row !important;
-    overflow-x:auto !important;
-    scroll-snap-type:x mandatory !important;
-    gap:14px !important;
-    padding:0 0 16px !important;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-  }
-  .trust-partners-grid::-webkit-scrollbar{display:none}
-  .trust-partners-grid > a{
-    flex-shrink:0 !important;
-    width:260px !important;
-    scroll-snap-align:start !important;
-  }
-  .trust-stats-grid{
-    grid-template-columns:1fr 1fr !important;
-  }
-}
-
-/* ═══ REVIEWS GRID MOBILE ═══ */
-@media(max-width:640px){
-  .reviews-grid,.pc-reviews{grid-template-columns:1fr !important}
-  .services-list,.pc-services{grid-template-columns:1fr 1fr !important}
-}
-
 </style>
 
-  <!-- ═══ SEO: Open Graph ═══ -->
-  <!-- Questi tag controllano come appare il link quando condiviso su social/WhatsApp -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Elyos">
   <meta property="og:url" content="https://elyos.it/blog/">
@@ -247,11 +169,9 @@ img{max-width:100%;height:auto}
   <meta property="og:description" content="Articoli pratici su impianti elettrici, manutenzione e sicurezza. Scritti da chi lavora ogni giorno a Ladispoli.">
   <meta property="og:image" content="https://elyos.it/og-home.jpg">
   <meta property="og:locale" content="it_IT">
-  <!-- Twitter/X card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Blog — Consigli elettrici e news da Ladispoli | Elyos">
   <meta name="twitter:description" content="Articoli pratici su impianti elettrici, manutenzione e sicurezza. Scritti da chi lavora ogni giorno a Ladispoli.">
-  <!-- Canonical: dice a Google qual è l'URL ufficiale, evita penalità contenuto duplicato -->
   <link rel="canonical" href="https://elyos.it/blog/">
 </head>
 <body>
@@ -266,7 +186,7 @@ img{max-width:100%;height:auto}
       <a href="/interventi/" class="nav-link">Interventi</a>
       <a href="/partner/i-nostri-partner/" class="nav-link">I nostri partner</a>
       <a href="/chi-siamo/" class="nav-link">Chi siamo</a>
-      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/blog/" class="nav-link active">Blog</a>
       <a href="/contatti/" class="nav-link">Contatti</a>
     </div>
     <div class="nav-ctas">
@@ -293,191 +213,160 @@ img{max-width:100%;height:auto}
 <section class="blog-section">
   <div class="container">
     <div class="section-label">Articoli recenti</div>
-    <h2 class="section-title">In arrivo presto.</h2>
+    <h2 class="section-title">Tutti gli articoli.</h2>
     <div class="blog-grid">
-      <a href="#" class="blog-card" onclick="return false;">
-        <div class="blog-thumb t1">⚡</div>
+
+      <a href="/blog/segnali-impianto-elettrico-da-controllare/" class="blog-card">
+        <div class="blog-thumb t1"><i class="ph ph-lightning" style="font-size:48px;color:var(--orange)"></i></div>
         <div class="blog-body">
           <div class="blog-cat">Sicurezza</div>
           <h3>5 segnali che il tuo impianto elettrico va controllato</h3>
           <p>Odore di bruciato, interruttori che scattano spesso, luci che lampeggiano: capire quando è il momento di chiamare un tecnico.</p>
-          <div class="blog-meta"><span>Prossimamente</span><span>📖 5 min</span></div>
+          <div class="blog-meta"><span>15 mag 2025</span><span>📖 5 min</span></div>
         </div>
       </a>
-      <a href="#" class="blog-card" onclick="return false;">
-        <div class="blog-thumb t2">🏠</div>
+
+      <a href="/blog/cosa-fare-quando-scatta-il-salvavita/" class="blog-card">
+        <div class="blog-thumb t2"><i class="ph ph-house-line" style="font-size:48px;color:var(--blue)"></i></div>
         <div class="blog-body">
           <div class="blog-cat">Consigli pratici</div>
           <h3>Cosa fare quando scatta il salvavita</h3>
           <p>Guida pratica step-by-step: cosa controllare prima di chiamare un elettricista e quando invece è meglio farlo subito.</p>
-          <div class="blog-meta"><span>Prossimamente</span><span>📖 4 min</span></div>
+          <div class="blog-meta"><span>15 mag 2025</span><span>📖 4 min</span></div>
         </div>
       </a>
-      <a href="#" class="blog-card" onclick="return false;">
-        <div class="blog-thumb t3">💡</div>
+
+      <a href="/blog/come-ridurre-consumi-elettrici-casa/" class="blog-card">
+        <div class="blog-thumb t3"><i class="ph ph-lightbulb" style="font-size:48px;color:#22C55E"></i></div>
         <div class="blog-body">
           <div class="blog-cat">Risparmio energetico</div>
           <h3>Come ridurre i consumi elettrici in casa senza rinunciare al comfort</h3>
           <p>Piccoli accorgimenti sull'impianto che possono fare una differenza reale sulla bolletta a fine mese.</p>
-          <div class="blog-meta"><span>Prossimamente</span><span>📖 6 min</span></div>
+          <div class="blog-meta"><span>15 mag 2025</span><span>📖 6 min</span></div>
         </div>
       </a>
-      <a href="#" class="blog-card" onclick="return false;">
-        <div class="blog-thumb t4">🔌</div>
+
+      <a href="/blog/dichiarazione-conformita-impianto-elettrico/" class="blog-card">
+        <div class="blog-thumb t4"><i class="ph ph-plug" style="font-size:48px;color:#0EA5E9"></i></div>
         <div class="blog-body">
           <div class="blog-cat">Normativa</div>
           <h3>Dichiarazione di conformità: cos'è e quando ti serve</h3>
           <p>Tutto quello che devi sapere sulla dichiarazione di conformità degli impianti elettrici in Italia.</p>
-          <div class="blog-meta"><span>Prossimamente</span><span>📖 7 min</span></div>
+          <div class="blog-meta"><span>15 mag 2025</span><span>📖 7 min</span></div>
         </div>
       </a>
-      <a href="#" class="blog-card" onclick="return false;">
-        <div class="blog-thumb t5">🛡️</div>
+
+      <a href="/blog/quadro-elettrico-quando-sostituirlo/" class="blog-card">
+        <div class="blog-thumb t5"><i class="ph ph-shield-check" style="font-size:48px;color:#7C3AED"></i></div>
         <div class="blog-body">
           <div class="blog-cat">Sicurezza</div>
           <h3>Quadro elettrico: vita utile, segnali di usura e quando sostituirlo</h3>
           <p>Il quadro elettrico è il cuore dell'impianto. Ecco come riconoscere quando è ora di rinnovarlo.</p>
-          <div class="blog-meta"><span>Prossimamente</span><span>📖 5 min</span></div>
+          <div class="blog-meta"><span>15 mag 2025</span><span>📖 5 min</span></div>
         </div>
       </a>
-      <a href="#" class="blog-card" onclick="return false;">
-        <div class="blog-thumb t6">🌊</div>
+
+      <a href="/blog/impianti-elettrici-al-mare-ladispoli/" class="blog-card">
+        <div class="blog-thumb t6"><i class="ph ph-waves" style="font-size:48px;color:#D97706"></i></div>
         <div class="blog-body">
           <div class="blog-cat">Territorio</div>
           <h3>Impianti elettrici al mare: cosa cambia rispetto alle case in città</h3>
           <p>L'ambiente marino è più aggressivo per gli impianti. Cosa considerare per le case vacanze a Ladispoli e sul litorale.</p>
-          <div class="blog-meta"><span>Prossimamente</span><span>📖 5 min</span></div>
+          <div class="blog-meta"><span>15 mag 2025</span><span>📖 5 min</span></div>
         </div>
       </a>
-    </div>
-    <div class="blog-coming">
-      <div class="bi">✍️</div>
-      <h3>Gli articoli sono in preparazione.</h3>
-      <p>Stiamo scrivendo contenuti utili su sicurezza elettrica, risparmio energetico e normative. Nel frattempo, se hai domande scrivici direttamente.</p>
-      <button class="btn-wa" onclick="trackEvent('wa_click');window.open('https://wa.me/393270511938?text=Ciao Elyos, ho una domanda sull%27impianto elettrico','_blank')">💬 Fai una domanda su WhatsApp</button>
+
     </div>
   </div>
 </section>
+
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" width="24" height="24"><path d="M60 5 L10 20 V65 C10 95 55 120 60 125 C65 120 110 95 110 65 V20 Z" fill="none" stroke="#FF6600" stroke-width="10" stroke-linejoin="round"/><path d="M65 25 L35 70 H60 L55 105 L85 60 H60 Z" fill="#FF6600"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" width="22" height="22"><path d="M60 5 L10 20 V65 C10 95 55 120 60 125 C65 120 110 95 110 65 V20 Z" fill="none" stroke="#FF6600" stroke-width="10" stroke-linejoin="round"/><path d="M65 25 L35 70 H60 L55 105 L85 60 H60 Z" fill="#FF6600"/></svg>
           Elyos
         </div>
         <p>Rete di tecnici elettrici verificati a Ladispoli. Coordiniamo l'intervento, garantiamo la qualità.</p>
-        <div class="footer-contacts">
-          <a href="https://wa.me/393270511938" target="_blank" class="footer-contact-btn">
-            <i class="ph ph-whatsapp-logo"></i> WhatsApp
-          </a>
-          <a href="tel:+393270511938" class="footer-contact-btn">
-            <i class="ph ph-phone-call"></i> Chiama
-          </a>
+        <div class="footer-social">
+          <a href="https://wa.me/393270511938" class="social-btn">WhatsApp</a>
+          <a href="tel:+393270511938" class="social-btn">Chiama</a>
         </div>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Servizi</div>
-        <a href="/interventi/"><i class="ph ph-lightning-slash"></i> Pronto intervento</a>
-        <a href="/interventi/"><i class="ph ph-clipboard-text"></i> Sopralluogo e preventivo</a>
-        <a href="/partner/"><i class="ph ph-handshake"></i> Diventa partner</a>
-        <a href="/partner/i-nostri-partner/"><i class="ph ph-users-three"></i> I nostri partner</a>
+        <a href="/interventi/">Pronto intervento</a>
+        <a href="/interventi/">Sopralluogo e preventivo</a>
+        <a href="/partner/">Diventa partner</a>
+        <a href="/partner/i-nostri-partner/">I nostri partner</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Azienda</div>
-        <a href="/chi-siamo/"><i class="ph ph-users-three"></i> Chi siamo</a>
-        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog e news</a>
-        <a href="/contatti/"><i class="ph ph-envelope-simple"></i> Contatti</a>
+        <a href="/chi-siamo/">Chi siamo</a>
+        <a href="/blog/">Blog e news</a>
+        <a href="/contatti/">Contatti</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Zone coperte</div>
-        <span><i class="ph ph-map-pin"></i> Ladispoli</span>
-        <span><i class="ph ph-map-pin"></i> Cerenova</span>
-        <span><i class="ph ph-map-pin"></i> Cerveteri</span>
-        <span><i class="ph ph-map-pin"></i> Marina di S. Nicola</span>
+        <span>Ladispoli</span>
+        <span>Cerenova</span>
+        <span>Cerveteri</span>
+        <span>Marina di S. Nicola</span>
       </div>
     </div>
+  </div>
+  <div class="container">
     <div class="footer-bottom">
       <span>© 2025 Elyos · P.IVA IT17181761002 · Ladispoli (RM)</span>
       <div class="footer-links">
-        <a onclick="openPrivacy()" href="#">Privacy Policy</a>
-        <a onclick="openPrivacy()" href="#">Cookie Policy</a>
+        <a href="#" onclick="document.getElementById('priv-overlay').classList.add('open');return false;">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
       </div>
     </div>
   </div>
 </footer>
-<div class="priv-overlay" id="priv-overlay">
+
+<div class="priv-overlay" id="priv-overlay" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="priv-box">
-    <div class="priv-close" onclick="closePrivacy()"><i class="ph ph-x"></i></div>
+    <button class="priv-close" onclick="document.getElementById('priv-overlay').classList.remove('open')">✕</button>
     <h2>Privacy Policy</h2>
-    <p class="priv-date">Ultimo aggiornamento: Maggio 2025</p>
-    <h3>1. Titolare del trattamento</h3>
-    <p>Elyos, Ladispoli (RM). Contatto: +39 327 051 1938</p>
-    <h3>2. Dati raccolti</h3>
-    <p>Raccogliamo solo i dati che fornisci volontariamente tramite i form del sito (telefono, email, zona, tipo richiesta). Non usiamo cookie di profilazione.</p>
-    <h3>3. Finalità e base giuridica</h3>
-    <p>Trattamento per rispondere alle richieste (art. 6 par.1 lett. b GDPR). Nessun utilizzo marketing senza consenso.</p>
-    <h3>4. Responsabile esterno</h3>
-    <p>I form usano <strong>Formspree Inc.</strong> come responsabile del trattamento. Privacy policy: formspree.io/legal/privacy-policy</p>
-    <h3>5. Conservazione</h3>
-    <p>Dati conservati per il tempo necessario alla gestione della richiesta, max 12 mesi.</p>
-    <h3>6. Tuoi diritti (artt. 15–22 GDPR)</h3>
-    <p>Accesso, rettifica, cancellazione, limitazione, portabilità, opposizione. Contattaci su WhatsApp o scrivi al Garante (garanteprivacy.it).</p>
-    <h3>7. Cookie</h3>
-    <p>Solo cookie tecnici essenziali. Nessun cookie pubblicitario o di terze parti.</p>
+    <div class="priv-date">Ultimo aggiornamento: Maggio 2025</div>
+    <h3>1. Titolare del trattamento</h3><p>Elyos, Ladispoli (RM). Contatto: +39 327 051 1938</p>
+    <h3>2. Dati raccolti</h3><p>Raccogliamo solo i dati che fornisci volontariamente tramite i form del sito (telefono, email, zona, tipo richiesta). Non usiamo cookie di profilazione.</p>
+    <h3>3. Finalità e base giuridica</h3><p>Trattamento per rispondere alle richieste (art. 6 par.1 lett. b GDPR). Nessun utilizzo marketing senza consenso.</p>
+    <h3>4. Responsabile esterno</h3><p>I form usano <strong>Formspree Inc.</strong> come responsabile del trattamento. Privacy policy: formspree.io/legal/privacy-policy</p>
+    <h3>5. Conservazione</h3><p>Dati conservati per il tempo necessario alla gestione della richiesta, max 12 mesi.</p>
+    <h3>6. Tuoi diritti (artt. 15–22 GDPR)</h3><p>Accesso, rettifica, cancellazione, limitazione, portabilità, opposizione. Contattaci su WhatsApp o scrivi al Garante (garanteprivacy.it).</p>
+    <h3>7. Cookie</h3><p>Solo cookie tecnici essenziali. Nessun cookie pubblicitario o di terze parti.</p>
   </div>
 </div>
+
 <div class="cookie-bar" id="cookie-bar">
-  <p><i class="ph ph-cookie" style="vertical-align:-.15em"></i> Questo sito usa solo cookie tecnici. Raccogliamo i dati dei form secondo il GDPR. <a onclick="openPrivacy()" href="#">Privacy Policy</a></p>
+  <p>Questo sito usa solo cookie tecnici. Raccogliamo i dati dei form secondo il GDPR. <a href="#" onclick="document.getElementById('priv-overlay').classList.add('open');return false;">Privacy Policy</a></p>
   <div class="cb-btns">
-    <button class="cb-decline" onclick="closeCookie()" aria-label="Chiudi banner cookie">Chiudi</button>
-    <button class="cb-accept" onclick="closeCookie()" aria-label="Accetta cookie">Ho capito</button>
+    <button class="cb-decline" onclick="document.getElementById('cookie-bar').style.display='none'">Chiudi</button>
+    <button class="cb-accept" onclick="document.getElementById('cookie-bar').style.display='none'">Ho capito</button>
   </div>
 </div>
 
 <script>
 function toggleMenu(){
-  const links = document.getElementById("nav-links");
-  const ham = document.getElementById("hamburger");
-  links.classList.toggle("open");
-  ham.classList.toggle("open");
-  document.body.style.overflow = links.classList.contains("open") ? "hidden" : "";
+  const nl=document.getElementById('nav-links');
+  const hb=document.getElementById('hamburger');
+  nl.classList.toggle('open');
+  hb.classList.toggle('open');
+  hb.setAttribute('aria-expanded',nl.classList.contains('open'));
 }
-function openPrivacy(){
-  document.getElementById("priv-overlay").classList.add("open");
-  document.body.style.overflow="hidden";
-}
-function closePrivacy(){
-  document.getElementById("priv-overlay").classList.remove("open");
-  document.body.style.overflow="";
-}
-function closeCookie(){
-  const bar = document.getElementById("cookie-bar");
-  if(bar) bar.style.display="none";
-  localStorage.setItem("ck","1");
-}
-document.addEventListener("DOMContentLoaded",function(){
-  // Active nav link
-  const path = window.location.pathname;
-  document.querySelectorAll(".nav-link").forEach(l=>{
-    if(l.getAttribute("href")===path || (path.startsWith(l.getAttribute("href")) && l.getAttribute("href")!=="/"))
-      l.classList.add("active");
-    else if(l.getAttribute("href")==="/" && path==="/") l.classList.add("active");
-  });
-  // Privacy overlay click
-  const ov = document.getElementById("priv-overlay");
-  if(ov) ov.addEventListener("click",function(e){ if(e.target===this) closePrivacy(); });
-  // Cookie bar
-  if(localStorage.getItem("ck")){
-    const bar = document.getElementById("cookie-bar");
-    if(bar) bar.style.display="none";
+document.addEventListener('click',function(e){
+  const nl=document.getElementById('nav-links');
+  const hb=document.getElementById('hamburger');
+  if(nl.classList.contains('open')&&!nl.contains(e.target)&&!hb.contains(e.target)){
+    nl.classList.remove('open');hb.classList.remove('open');
   }
-  // Nav scroll
-  window.addEventListener("scroll",()=>{
-    document.getElementById("main-nav").style.background =
-      window.scrollY>40?"rgba(6,11,20,.98)":"rgba(6,11,20,.92)";
-  });
-}); // end DOMContentLoaded
+});
+if(localStorage.getItem('cookie-ok')){document.getElementById('cookie-bar').style.display='none'}
+document.querySelectorAll('.cb-accept,.cb-decline').forEach(b=>b.addEventListener('click',()=>localStorage.setItem('cookie-ok','1')));
 </script>
 </body>
 </html>
