@@ -200,6 +200,18 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 0
 }
 html,body{max-width:100%;overflow-x:hidden}
 img{max-width:100%;height:auto}
+
+/* ── STEPS ───────────────────────────────────────────────── */
+.steps{display:flex;flex-direction:column;gap:14px;margin:24px 0}
+.step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;transition:.2s}
+.step:hover{border-color:rgba(255,107,43,.2)}
+.step h3{font-family:"Barlow Condensed",sans-serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:6px;line-height:1.1}
+.step p{font-size:14px;color:var(--text2);line-height:1.7;margin:0}
+.step-n{width:38px;height:38px;border-radius:50%;background:rgba(255,107,43,.12);border:2px solid rgba(255,107,43,.3);color:var(--orange);font-family:"Barlow Condensed",sans-serif;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.step-n.blue{background:rgba(59,143,255,.12);border-color:rgba(59,143,255,.3);color:var(--blue-l)}
+.step-n.green{background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.3);color:var(--green)}
+.step-n.red{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.3);color:#EF4444}
+.note{display:block;font-size:13px;color:var(--orange);font-weight:600;margin-top:8px}
 </style>
 </head>
 <body>
@@ -238,16 +250,16 @@ img{max-width:100%;height:auto}
       <div class="breadcrumb">
         <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span>Cosa fare quando scatta il salvavita</span>
       </div>
-      <div class="cat-pill" style="background:rgba(27,111,216,.1);border:1px solid rgba(27,111,216,.2);color:#3B8FFF"><i class="ph ph-house-line"></i> Consigli pratici</div>
+      <div class="article-eyebrow"><i class="ph ph-house-line"></i> Consigli pratici</div>
       <h1 class="article-title">Cosa fare quando<br>scatta il salvavita</h1>
       <div class="article-meta">
         <div class="meta-item"><i class="ph ph-calendar-blank"></i> 15 maggio 2025</div>
         <div class="meta-item"><i class="ph ph-book-open"></i> 4 min di lettura</div>
         <div class="meta-item"><i class="ph ph-map-pin"></i> Ladispoli, litorale romano</div>
       </div>
-      <div class="hero-divider"></div>
     </div>
   </div>
+  <div class="hero-divider"></div>
 </div>
 
 <!-- BODY -->
@@ -279,11 +291,21 @@ img{max-width:100%;height:auto}
 <h2>Cosa succede se continuo a resettarlo</h2>
 <p>Ignorare la causa e resettare ripetutamente non risolve il problema — lo posticipa. Nei casi più gravi il rischio è un incendio elettrico, o una scossa se la dispersione riguarda superfici metalliche accessibili. La regola: <strong>due scatti nello stesso giorno senza causa evidente = chiama un tecnico</strong>.</p>
 
-<div class="faq-block">
-<h2>Domande frequenti</h2>
-<div class="faq-item"><div class="faq-q">Il salvavita scatta di notte senza che nessuno stia usando nulla: perché?</div><div class="faq-a">Può dipendere da un elettrodomestico in standby che in certi momenti disperde corrente (lavatrice in pausa, freezer che si avvia). Un'altra causa comune è l'umidità: di notte la temperatura cala e l'umidità nei cavi aumenta, abbassando la resistenza di isolamento fino a far scattare il differenziale.</div></div>
-<div class="faq-item"><div class="faq-q">Posso sostituire il salvavita da solo?</div><div class="faq-a">No. Il quadro lavora con tensioni pericolose. La sostituzione deve essere fatta da un elettricista abilitato, che rilascerà anche la dichiarazione di conformità dell'intervento.</div></div>
-<div class="faq-item"><div class="faq-q">Quanto dura un salvavita?</div><div class="faq-a">Un differenziale ha una vita media di 15-20 anni. Nei quadri più vecchi è comune trovare salvavita che andrebbe sostituiti anche indipendentemente da guasti evidenti. Il tasto "test" serve proprio a verificarlo: premilo ogni anno.</div></div>
+<div class="faq-section">
+  <div class="section-label">Risposte rapide</div>
+  <h2>Domande frequenti</h2>
+  <div class="faq-item">
+    <div class="faq-q">Il salvavita scatta di notte senza che nessuno stia usando nulla: perché? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">Può dipendere da un elettrodomestico in standby che in certi momenti disperde corrente (lavatrice in pausa, freezer che si avvia). Un'altra causa comune è l'umidità: di notte la temperatura cala e l'umidità nei cavi aumenta, abbassando la resistenza di isolamento fino a far scattare il differenziale.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Posso sostituire il salvavita da solo? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">No. Il quadro lavora con tensioni pericolose. La sostituzione deve essere fatta da un elettricista abilitato, che rilascerà anche la dichiarazione di conformità dell'intervento.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Quanto dura un salvavita? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">Un differenziale ha una vita media di 15-20 anni. Nei quadri più vecchi è comune trovare salvavita che andrebbe sostituiti anche indipendentemente da guasti evidenti. Il tasto "test" serve proprio a verificarlo: premilo ogni anno.</div>
+  </div>
 </div>
 
 <div class="article-cta">
@@ -334,45 +356,6 @@ img{max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- FOOTER -->
-      </div><!-- /article-content -->
-
-      <!-- SIDEBAR -->
-      <aside class="article-sidebar">
-
-        <div class="sb-cta">
-          <div class="sb-cta-label"><i class="ph ph-lightning" style="color:var(--orange)"></i> Pronto intervento</div>
-          <h3>Hai un impianto da controllare?</h3>
-          <p>Sopralluogo gratuito a Ladispoli e dintorni. Prezzi comunicati prima di iniziare.</p>
-          <a href="/interventi/" class="sb-btn orange">Richiedi sopralluogo</a>
-          <a href="https://wa.me/393270511938" class="sb-btn wa"><i class="ph ph-chat-circle-dots"></i> Scrivi su WhatsApp</a>
-        </div>
-
-        <div class="sb-related">
-          <div class="sb-related-label">Leggi anche</div>
-          <a href="/blog/cosa-fare-quando-scatta-il-salvavita/" class="related-item">
-            <div class="rel-icon"><i class="ph ph-house-line" style="color:var(--blue)"></i></div>
-            Cosa fare quando scatta il salvavita
-          </a>
-          <a href="/blog/quadro-elettrico-quando-sostituirlo/" class="related-item">
-            <div class="rel-icon"><i class="ph ph-shield-check" style="color:#7C3AED"></i></div>
-            Quadro elettrico: quando sostituirlo
-          </a>
-          <a href="/blog/dichiarazione-conformita-impianto-elettrico/" class="related-item">
-            <div class="rel-icon"><i class="ph ph-plug" style="color:#0EA5E9"></i></div>
-            Dichiarazione di conformità
-          </a>
-          <a href="/blog/impianti-elettrici-al-mare-ladispoli/" class="related-item">
-            <div class="rel-icon"><i class="ph ph-waves" style="color:#D97706"></i></div>
-            Impianti elettrici al mare
-          </a>
-        </div>
-
-      </aside>
-
-    </div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer>

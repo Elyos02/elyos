@@ -200,6 +200,12 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:60px 0
 }
 html,body{max-width:100%;overflow-x:hidden}
 img{max-width:100%;height:auto}
+
+/* ── CALLOUT ─────────────────────────────────────────────── */
+.callout{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:24px 0}
+.callout.warning{border-left:3px solid #F59E0B;border-radius:0 14px 14px 0;border-color:rgba(245,158,11,.2);background:rgba(245,158,11,.04)}
+.callout p{font-size:14px;color:var(--text2);line-height:1.75;margin:0}
+.callout strong{color:var(--text)}
 </style>
 </head>
 <body>
@@ -238,16 +244,16 @@ img{max-width:100%;height:auto}
       <div class="breadcrumb">
         <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span>Dichiarazione di conformità</span>
       </div>
-      <div class="cat-pill" style="background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.2);color:#0EA5E9"><i class="ph ph-plug"></i> Normativa</div>
+      <div class="article-eyebrow"><i class="ph ph-plug"></i> Normativa</div>
       <h1 class="article-title">Dichiarazione di conformità:<br>cos'è e quando ti serve</h1>
       <div class="article-meta">
         <div class="meta-item"><i class="ph ph-calendar-blank"></i> 15 maggio 2025</div>
         <div class="meta-item"><i class="ph ph-book-open"></i> 7 min di lettura</div>
         <div class="meta-item"><i class="ph ph-map-pin"></i> Ladispoli, litorale romano</div>
       </div>
-      <div class="hero-divider"></div>
     </div>
   </div>
+  <div class="hero-divider"></div>
 </div>
 
 <!-- BODY -->
@@ -286,11 +292,21 @@ img{max-width:100%;height:auto}
 <p>Per impianti installati <strong>prima del 27 marzo 2008</strong> esiste la <strong>dichiarazione di rispondenza</strong>, rilasciata da un professionista abilitato che verifica l'impianto e attesta che risponde ai requisiti della normativa vigente al momento dell'installazione.</p>
 <p>Per impianti <strong>dopo il 2008 senza DiCo</strong>: la strada è far intervenire un installatore abilitato che, dopo eventuali adeguamenti, rilascerà la nuova dichiarazione di conformità per le parti interessate.</p>
 
-<div class="faq-block">
-<h2>Domande frequenti</h2>
-<div class="faq-item"><div class="faq-q">Posso vendere casa senza dichiarazione di conformità?</div><div class="faq-a">Tecnicamente sì: la legge non impone un obbligo assoluto di allegare la DiCo all'atto notarile. Tuttavia molti notai e acquirenti la richiedono, e la sua assenza può abbassare il valore percepito o rallentare la trattativa. Per gli impianti pre-2008, la dichiarazione di rispondenza è l'alternativa accettata.</div></div>
-<div class="faq-item"><div class="faq-q">La dichiarazione di conformità ha una scadenza?</div><div class="faq-a">No. Certifica che l'impianto era a norma al momento dell'intervento. Se si fanno modifiche successive senza nuova DiCo, quella vecchia vale solo per la parte di impianto che copriva.</div></div>
-<div class="faq-item"><div class="faq-q">Dove va conservata?</div><div class="faq-a">Insieme agli altri documenti dell'immobile. Una copia viene depositata in Comune per gli interventi che lo richiedono. Conservala per tutta la vita dell'immobile: potrebbe servirti anche decenni dopo.</div></div>
+<div class="faq-section">
+  <div class="section-label">Risposte rapide</div>
+  <h2>Domande frequenti</h2>
+  <div class="faq-item">
+    <div class="faq-q">Posso vendere casa senza dichiarazione di conformità? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">Tecnicamente sì: la legge non impone un obbligo assoluto di allegare la DiCo all'atto notarile. Tuttavia molti notai e acquirenti la richiedono, e la sua assenza può abbassare il valore percepito o rallentare la trattativa. Per gli impianti pre-2008, la dichiarazione di rispondenza è l'alternativa accettata.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">La dichiarazione di conformità ha una scadenza? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">No. Certifica che l'impianto era a norma al momento dell'intervento. Se si fanno modifiche successive senza nuova DiCo, quella vecchia vale solo per la parte di impianto che copriva.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Dove va conservata? <div class="faq-toggle">+</div></div>
+    <div class="faq-a">Insieme agli altri documenti dell'immobile. Una copia viene depositata in Comune per gli interventi che lo richiedono. Conservala per tutta la vita dell'immobile: potrebbe servirti anche decenni dopo.</div>
+  </div>
 </div>
 
 <div class="article-cta">
@@ -341,45 +357,6 @@ img{max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- FOOTER -->
-      </div><!-- /article-content -->
-
-      <!-- SIDEBAR -->
-      <aside class="article-sidebar">
-
-        <div class="sb-cta">
-          <div class="sb-cta-label"><i class="ph ph-lightning" style="color:var(--orange)"></i> Pronto intervento</div>
-          <h3>Hai un impianto da controllare?</h3>
-          <p>Sopralluogo gratuito a Ladispoli e dintorni. Prezzi comunicati prima di iniziare.</p>
-          <a href="/interventi/" class="sb-btn orange">Richiedi sopralluogo</a>
-          <a href="https://wa.me/393270511938" class="sb-btn wa"><i class="ph ph-chat-circle-dots"></i> Scrivi su WhatsApp</a>
-        </div>
-
-        <div class="sb-related">
-          <div class="sb-related-label">Leggi anche</div>
-          <a href="/blog/cosa-fare-quando-scatta-il-salvavita/" class="related-item">
-            <div class="rel-icon"><i class="ph ph-house-line" style="color:var(--blue)"></i></div>
-            Cosa fare quando scatta il salvavita
-          </a>
-          <a href="/blog/quadro-elettrico-quando-sostituirlo/" class="related-item">
-            <div class="rel-icon"><i class="ph ph-shield-check" style="color:#7C3AED"></i></div>
-            Quadro elettrico: quando sostituirlo
-          </a>
-          <a href="/blog/dichiarazione-conformita-impianto-elettrico/" class="related-item">
-            <div class="rel-icon"><i class="ph ph-plug" style="color:#0EA5E9"></i></div>
-            Dichiarazione di conformità
-          </a>
-          <a href="/blog/impianti-elettrici-al-mare-ladispoli/" class="related-item">
-            <div class="rel-icon"><i class="ph ph-waves" style="color:#D97706"></i></div>
-            Impianti elettrici al mare
-          </a>
-        </div>
-
-      </aside>
-
-    </div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer>
