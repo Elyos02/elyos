@@ -137,11 +137,13 @@ h1.article-title{font-size:clamp(40px,5.5vw,70px);font-weight:900;color:var(--wh
 .article-cta{background:linear-gradient(135deg,rgba(255,107,43,.1) 0%,rgba(27,111,216,.06) 100%);border:1px solid rgba(255,107,43,.2);border-radius:20px;padding:40px 36px;margin-top:52px;text-align:center}
 .article-cta h2{font-size:clamp(26px,3.5vw,38px);font-weight:800;color:var(--white);margin-bottom:10px}
 .article-cta p{font-size:15px;color:var(--text2);margin-bottom:26px}
-.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-orange{padding:13px 26px;background:var(--orange);color:white;border:none;border-radius:10px;font-family:"Outfit",sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:inline-block;transition:.2s}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;align-items:center}
+.btn-orange{padding:13px 26px;background:var(--orange);color:white;border:none;border-radius:10px;font-family:"Outfit",sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s}
 .btn-orange:hover{background:var(--orange-l);transform:translateY(-1px)}
-.btn-ghost{padding:13px 26px;border:1px solid var(--border2);border-radius:10px;font-size:14px;font-weight:600;color:var(--text2);display:inline-block;transition:.2s;background:transparent}
-.btn-ghost:hover{background:var(--dark3);color:var(--text)}
+.btn-wa-cta{padding:13px 26px;background:rgba(37,211,102,.12);border:1.5px solid rgba(37,211,102,.3);border-radius:10px;font-size:14px;font-weight:600;color:#25D366;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.btn-wa-cta:hover{background:rgba(37,211,102,.2);border-color:rgba(37,211,102,.5)}
+.btn-ghost{padding:13px 26px;border:1.5px solid rgba(255,255,255,.2);border-radius:10px;font-size:14px;font-weight:600;color:var(--text);display:inline-flex;align-items:center;gap:8px;transition:.2s;background:rgba(255,255,255,.05)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:var(--white)}
 
 /* ── SIDEBAR ─────────────────────────────────────────────── */
 .article-sidebar{position:sticky;top:84px;display:flex;flex-direction:column;gap:16px}
@@ -242,9 +244,9 @@ img{max-width:100%;height:auto}
       <div class="article-eyebrow"><i class="ph ph-lightning"></i> Sicurezza</div>
       <h1 class="article-title">5 segnali che il tuo<br>impianto elettrico<br>va controllato</h1>
       <div class="article-meta">
-        <div class="meta-item">📅 15 maggio 2025</div>
-        <div class="meta-item">📖 5 min di lettura</div>
-        <div class="meta-item">📍 Ladispoli, litorale romano</div>
+        <div class="meta-item"><i class="ph ph-calendar-blank"></i> 15 maggio 2025</div>
+        <div class="meta-item"><i class="ph ph-book-open"></i> 5 min di lettura</div>
+        <div class="meta-item"><i class="ph ph-map-pin"></i> Ladispoli, litorale romano</div>
       </div>
     </div>
   </div>
@@ -275,7 +277,7 @@ img{max-width:100%;height:auto}
             </div>
           </div>
           <div class="signal-card">
-            <div class="signal-icon">🔁</div>
+            <div class="signal-icon"><i class="ph ph-arrows-clockwise" style="font-size:24px;color:var(--orange)"></i></div>
             <div>
               <div class="signal-num">Segnale 02</div>
               <div class="signal-title">Il salvavita scatta frequentemente</div>
@@ -293,7 +295,7 @@ img{max-width:100%;height:auto}
             </div>
           </div>
           <div class="signal-card">
-            <div class="signal-icon">🌡️</div>
+            <div class="signal-icon"><i class="ph ph-thermometer" style="font-size:24px;color:var(--orange)"></i></div>
             <div>
               <div class="signal-num">Segnale 04</div>
               <div class="signal-title">Prese o interruttori caldi al tatto</div>
@@ -302,7 +304,7 @@ img{max-width:100%;height:auto}
             </div>
           </div>
           <div class="signal-card">
-            <div class="signal-icon">📅</div>
+            <div class="signal-icon"><i class="ph ph-calendar-blank" style="font-size:24px;color:var(--orange)"></i></div>
             <div>
               <div class="signal-num">Segnale 05</div>
               <div class="signal-title">Impianto con più di 20-25 anni mai revisionato</div>
@@ -357,7 +359,7 @@ img{max-width:100%;height:auto}
           <p>Sopralluogo gratuito a Ladispoli e dintorni. Il tecnico verifica e ti dice tutto — prima di toccare qualsiasi cosa.</p>
           <div class="cta-btns">
             <a href="/interventi/" class="btn-orange">Prenota sopralluogo gratuito</a>
-            <a href="https://wa.me/393270511938" class="btn-ghost"><i class="ph ph-chat-circle-dots"></i> Scrivi su WhatsApp</a>
+            <a href="https://wa.me/393270511938" class="btn-wa-cta"><i class="ph ph-whatsapp-logo"></i> Scrivi su WhatsApp</a>
           </div>
         </div>
 
